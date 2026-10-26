@@ -44,4 +44,4 @@ Cada reseña incluye una ficha rápida con el gasto aproximado, si conviene rese
 
 Escribo en primera persona, aunque muchas veces comparto lo que más *nos* gustó a quienes me acompañan. Las visitas las pago yo. Si algún día una visita es por invitación, lo voy a decir claramente al inicio de la reseña.
 
-Sígueme en [Instagram](https://www.instagram.com/manediaz4gs) y [Pinterest](https://www.pinterest.com/manediaz4gs) para ver cada reseña en cuanto sale.
+Sígueme en [Instagram](https://www.instagram.com/maneexplora) y [Pinterest](https://www.pinterest.com/manediaz4gs) para ver cada reseña en cuanto sale.

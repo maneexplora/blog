@@ -8,7 +8,7 @@ SITE = {
     "url": "https://maneexplora.com",
     "tagline": "Reseñas honestas de restaurantes, cafés, cultura y viajes",
     "desc": "Lo bueno, lo mejorable y si vale la pena ir. Reseñas honestas de restaurantes, cafés, museos y viajes por Manuel Alemán.",
-    "instagram": "manediaz4gs",
+    "instagram": "maneexplora",
     "pinterest": "manediaz4gs",
     "adsense_client": "",  # ej. "ca-pub-1234567890" cuando AdSense apruebe el sitio
 }

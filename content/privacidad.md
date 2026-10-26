@@ -22,4 +22,4 @@ Algunos enlaces pueden ser de afiliado. Si reservas o compras a través de ellos
 
 ## Contacto
 
-Para cualquier duda sobre esta política, escríbeme por mensaje directo en [Instagram](https://www.instagram.com/manediaz4gs).
+Para cualquier duda sobre esta política, escríbeme por mensaje directo en [Instagram](https://www.instagram.com/maneexplora).

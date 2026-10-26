@@ -10,6 +10,7 @@ verdict_label: "Vale el viaje"
 instagram:
 price_pp: "$60 MXN (mexicanos) · $85 MXN entrada general"
 reservation: "No se necesita"
+ideal_for: "Toda la familia"
 duration: "Alrededor de 2 horas y media"
 would_return: "Sí: las exposiciones cambian constantemente"
 paid: true
@@ -34,6 +35,10 @@ gallery:
   - [/img/cabanas/las-mil-y-una-noches.jpg, "Las mil y una noches · dibujo de Laura Quintanilla"]
   - [/img/cabanas/la-puerta-negra.jpg, "La puerta negra · dibujo de Racrufi"]
   - [/img/cabanas/acordeon.jpg, "Acordeón de Jorge Mejía Avante"]
+  - [/img/cabanas/cupula-hombre-de-fuego.jpg, "La cúpula con El Hombre de Fuego, de José Clemente Orozco"]
+  - [/img/cabanas/murales-orozco.jpg, "La capilla mayor, cubierta con los murales de Orozco"]
+  - [/img/cabanas/ceramica.jpg, "Una de las salas de arte popular"]
+  - [/img/cabanas/patio-escultura.jpg, "Escultura en uno de los patios"]
   - [/img/cabanas/patio.jpg, "Uno de los patios del museo"]
 ---
 
@@ -65,4 +70,4 @@ En su interior están los 57 frescos que José Clemente Orozco comenzó a pintar
 
 ## Veredicto
 
-**Vale el viaje.** Un plan cultural imperdible en Guadalajara: arte, música e historia en un solo recorrido. Volvería sin duda, porque las exposiciones cambian constantemente; hace unos meses, por ejemplo, exhibieron una obra de Diego Rivera que no alcancé a ver.
+**Vale el viaje.** Un plan cultural imperdible en Guadalajara: arte, música e historia en un solo recorrido. Volvería sin duda, porque las exposiciones cambian constantemente; según supe, hace unos meses exhibieron *Vendedora de flores* (1941), de Diego Rivera, y no la alcancé a ver.

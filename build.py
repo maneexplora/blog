@@ -314,7 +314,7 @@ def main():
             sitemap.append(url(lang, kind))
     # 404 (multilingüe)
     t = T["es"]
-    write("404.html", page("es", f"{t['nf_title']} | {SITE['name']}", t["desc"], '<section class="intro"><h1>Esta página no existe · This page doesn\'t exist · 此页面不存在</h1><p><a href="/">Volver a las reseñas</a> · <a href="/en/">Back to the reviews</a> · <a href="/zh/">返回点评</a></p></section>', {"es": "/404"}))
+    write("404.html", page("es", f"{t['nf_title']} | {SITE['name']}", t["desc"], '<section class="intro"><h1>Esta página no existe · This page doesn\'t exist · 此页面不存在</h1><p><a href="/">Volver a las reseñas</a> · <a href="/en/">Back to the reviews</a> · <a href="/zh/">返回点评</a></p></section>', {"es": "/"}))
     # RSS (español)
     items = "".join(f"<item><title>{esc(p['title'])}</title><link>{SITE['url']}{url('es','rev',p['slug'])}</link><guid>{SITE['url']}{url('es','rev',p['slug'])}</guid><pubDate>{datetime.datetime.combine(p['date'], datetime.time(10)).strftime('%a, %d %b %Y %H:%M:%S -0600')}</pubDate><description>{esc(p['excerpt'])}</description><enclosure url=\"{SITE['url']}{p['cover']}\" type=\"image/jpeg\" length=\"0\"/></item>" for p in posts["es"])
     write("rss.xml", f'<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>{SITE["name"]}</title><link>{SITE["url"]}</link><description>{esc(T["es"]["desc"])}</description><language>es</language>{items}</channel></rss>')

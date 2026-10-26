@@ -9,7 +9,7 @@ SITE = {
     "tagline": "Reseñas honestas de restaurantes, cafés, cultura y viajes",
     "desc": "Lo bueno, lo mejorable y si vale la pena ir. Reseñas honestas de restaurantes, cafés, museos y viajes por Manuel Alemán.",
     "instagram": "maneexplora",
-    "pinterest": "manediaz4gs",
+    "pinterest": "maneexplora",
     "adsense_client": "",  # ej. "ca-pub-1234567890" cuando AdSense apruebe el sitio
 }
 ROOT = os.path.dirname(os.path.abspath(__file__))

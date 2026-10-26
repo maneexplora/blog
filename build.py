@@ -19,11 +19,23 @@ MONTHS = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","sep
 def esc(s): return html.escape(str(s or ""), quote=True)
 def fdate(d): return f"{d.day} de {MONTHS[d.month-1]} de {d.year}"
 
-def stars(r):
+def stars(r, num=True):
     if r in (None, ""): return ""
-    r = float(r); full = int(r); half = r - full >= 0.5
-    s = "★" * full + ("½" if half else "")
-    return f'<span class="stars" aria-label="{r:g} de 5">{s}<span class="out">{"☆"*(5-full-(1 if half else 0))}</span></span> <b>{r:g}/5</b>'
+    r = float(r)
+    return f'<span class="stars5" style="--p:{r/5*100:.0f}%" role="img" aria-label="{r:g} de 5 estrellas"></span>' + (f' <b>{r:g}/5</b>' if num else "")
+
+WEIGHTS = {"Servicio": .35, "Sabor": .30, "Ambiente": .15, "Calidad-precio": .20,
+           "Exposición": .35, "Experiencia y montaje": .20, "Edificio": .15, "Atención y orientación": .15}
+MUSEUM_KEYS = {"Exposición", "Experiencia y montaje", "Edificio", "Atención y orientación"}
+
+def weighted(sc):
+    museum = bool(MUSEUM_KEYS & set(sc))
+    w = {k: (WEIGHTS[k] if not (museum and k == "Calidad-precio") else .15) for k in sc}
+    raw = sum(sc[k] * w[k] for k in sc)
+    return raw, int(raw * 2 + 0.5 + 1e-9) / 2, w
+
+def verdict(r):
+    return "Vale el viaje" if r >= 4.5 else ("Vale el desvío" if r >= 3.5 else "Interesante")
 
 def load():
     posts = []
@@ -32,6 +44,7 @@ def load():
         _, fm, body = raw.split("---", 2)
         meta = yaml.safe_load(fm)
         meta["html"] = markdown.markdown(body, extensions=["extra"])
+        if meta.get("scores"): meta["rating"] = weighted(meta["scores"])[1]
         posts.append(meta)
     return sorted(posts, key=lambda p: p["date"], reverse=True)
 
@@ -75,19 +88,30 @@ def review(p):
     q = urllib.parse.quote(p["map_query"])
     gal = "".join(f'<figure><img src="{g[0]}" alt="{esc(g[1])}" loading="lazy"><figcaption>{esc(g[1])}</figcaption></figure>' for g in p["gallery"][1:])
     ig = f' · <a href="https://www.instagram.com/{p["instagram"]}" rel="noopener">@{esc(p["instagram"])}</a>' if p.get("instagram") else ""
-    rating = f'<div class="rating">{stars(p["rating"])}' + (f' <span class="label">{esc(p["verdict_label"])}</span>' if p.get("verdict_label") else "") + '</div>' if p.get("rating") not in (None, "") else ""
     sc = p.get("scores") or {}
-    scores = ("<div class=\"scores\">" + "".join(f'<div><span>{esc(k)}</span>{stars(v)}</div>' for k, v in sc.items()) + "</div>") if sc else ""
+    rating = ""
+    scorecard = ""
+    if sc:
+        raw, final, w = weighted(sc)
+        p["rating"] = final
+        label = p.get("verdict_label") and verdict(final)
+        rows = "".join(f'<tr><td>{esc(k)}</td><td class="num">{w[k]*100:.0f}%</td><td><div class="bar"><i style="width:{v/5*100:.0f}%"></i></div></td><td class="num"><b>{v:g}</b></td></tr>' for k, v in sc.items())
+        scorecard = (f'<section class="scorecard"><div class="sc-total"><div class="big">{final:g}</div>{stars(final, False)}<small>de 5</small>'
+                     + (f'<span class="label">{label}</span>' if label else "") + '</div>'
+                     + f'<table class="sc-table"><thead><tr><th>Criterio</th><th class="num">Peso</th><th>Calificación</th><th class="num">/5</th></tr></thead><tbody>{rows}</tbody>'
+                     + f'<tfoot><tr><td colspan="4">Promedio ponderado: {raw:.2f} → {final:g} (redondeo a medio punto). <a href="/sobre-mi/#metodo">Ver método</a></td></tr></tfoot></table></section>')
+    if p.get("rating") not in (None, ""):
+        rating = f'<div class="rating">{stars(p["rating"])}</div>'
     facts = [("Gasto aprox. por persona", p.get("price_pp")), ("Reservación", p.get("reservation")), ("Tiempo de visita", p.get("duration")), ("Ideal para", p.get("ideal_for")),
              ("¿Volvería?", p.get("would_return")), ("Fecha de visita", fdate(p["date"]))]
-    ficha = '<aside class="ficha"><h2>Ficha rápida</h2><dl>' + "".join(f"<dt>{k}</dt><dd>{esc(v)}</dd>" for k, v in facts if v) + "</dl>" + scores + "</aside>"
+    ficha = '<section class="ficha"><h2>Ficha rápida</h2><table>' + "".join(f"<tr><th>{k}</th><td>{esc(v)}</td></tr>" for k, v in facts if v) + "</table></section>"
     order = "".join(f"<li>{esc(x)}</li>" for x in (p.get("order") or []))
     avoid = "".join(f"<li>{esc(x)}</li>" for x in (p.get("avoid") or []))
     tips = ""
     if order or avoid:
         tips = '<div class="tips">' + (f'<div class="tip ok"><h3>{esc(p.get("order_title","Qué pedir"))}</h3><ul>{order}</ul></div>' if order else "") + (f'<div class="tip no"><h3>{esc(p.get("avoid_title","Qué evitaría"))}</h3><ul>{avoid}</ul></div>' if avoid else "") + "</div>"
     disclosure = '<p class="disclosure">Transparencia: esta visita la pagué al 100%. Sin invitación ni patrocinio.</p>' if p.get("paid") else ""
-    author = '<div class="author"><img src="/img/manuel-avatar.jpg" alt="Manuel Alemán" loading="lazy"><p><b>Manuel Alemán</b><br>Planeador de profesión, explorador por gusto. Reseño cada lugar con el mismo método: servicio, sabor, presentación y calidad-precio. <a href="/sobre-mi/">Conoce mi método →</a></p></div>'
+    author = '<div class="author"><img src="/img/manuel-avatar.jpg" alt="Manuel Alemán" loading="lazy"><p><b>Manuel Alemán</b><br>Supply Chain global de profesión, explorador por gusto. Reseño cada lugar con el mismo método y la misma escala. <a href="/sobre-mi/">Conoce mi método →</a></p></div>'
     ld = {"@context":"https://schema.org","@type":"Review","name":p["title"],"datePublished":str(p["date"]),
           "author":{"@type":"Person","name":"Manuel Alemán"},"publisher":{"@type":"Organization","name":SITE["name"]},
           "itemReviewed":{"@type":"Restaurant" if "Restaurante" in p["category"] or "Cafetería" in p["category"] else "Museum","name":p["place"],"address":p["city"]},
@@ -99,6 +123,7 @@ def review(p):
 <p class="byline">Por Manuel Alemán · {fdate(p['date'])}{ig}</p>
 {rating}
 <figure class="hero"><img src="{p['cover']}" alt="{esc(p['gallery'][0][1])}"><figcaption>{esc(p['gallery'][0][1])}</figcaption></figure>
+{scorecard}
 {ficha}
 <div class="prose">{p['html']}</div>
 {tips}

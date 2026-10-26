@@ -4,39 +4,42 @@ Hola, soy **Manuel Alemán**.
 
 Soy de **Ojocaliente**, un pueblo pequeño de Zacatecas, y he vivido en varios lugares de la República. Quizá por eso valoro tanto cuando un lugar muestra **calidad, autenticidad y, sobre todo, calidez** con quien lo visita.
 
-De profesión soy **Gerente de Planeación Global** en la industria de manufactura. Gracias a mi trabajo, en el último año he podido viajar constantemente, y en cada plática me preguntan lo mismo: *¿a dónde fuiste?, ¿qué me recomiendas?, ¿qué fue lo más rico?* Así nació Mane Explora: un pasatiempo para compartir mi opinión sobre los lugares que visito, pero hecho con la estructura y el estándar con los que trabajo todos los días.
-
-## Un plato que no olvido
+Trabajo en **Supply Chain global**. Gracias a mi trabajo, en el último año he podido viajar constantemente, y en cada plática me preguntan lo mismo: *¿a dónde fuiste?, ¿qué me recomiendas?, ¿qué fue lo más rico?* Así nació Mane Explora: un pasatiempo para compartir mi opinión sobre los lugares que visito, hecho con la estructura y el estándar con los que trabajo todos los días.
 
 He tenido la fortuna de comer en distintas partes del mundo, pero siempre recordaré un lugar en **El Cielo, en Gómez Farías**, Tamaulipas. Un guía nos llevó con una señora que cocinaba exquisito. El lugar era humilde, pero cálido, y el asado de puerco con arroz que nos sirvió era otra cosa. Esa comida resume lo que busco en cada visita.
 
-## Mi método
+## Mi método {#metodo}
 
-Cada reseña sigue los mismos criterios, en este orden de importancia:
+Califico de **1 a 5 estrellas**, con medios puntos, igual que Google o TripAdvisor. La calificación general es un **promedio ponderado**: cada criterio pesa según su importancia y el resultado se redondea a medio punto.
 
-1. **Servicio.** Siempre es lindo que te reciban con gusto en el lugar al que vas.
-2. **Sabor.** Es el corazón de cualquier comida.
-3. **Presentación.** Gana puntos cuando un platillo se ve tan bien como sabe.
-4. **Calidad-precio.** Como decía mi madre: *qué rico es gastar cuando disfrutas la comida, y qué horrible cuando pagas caro y no la disfrutaste.*
+**Restaurantes y cafés**
 
-Califico de **1 a 5 estrellas**, con medios puntos, igual que Google o TripAdvisor. La calificación general no es un promedio simple: es un **promedio ponderado** según la importancia de cada criterio, redondeado a medio punto.
+| Orden | Criterio | Peso | Qué evalúo |
+|---|---|---|---|
+| 1 | Servicio | 35% | Que te reciban con gusto y te atiendan bien |
+| 2 | Sabor | 30% | El corazón de cualquier comida |
+| 3 | Ambiente y presentación | 15% | El lugar y cómo llegan los platillos a la mesa |
+| 4 | Calidad-precio | 20% | Si lo que pagas vale lo que recibes |
 
-| Restaurantes y cafés | Peso |
+Sobre calidad-precio, como decía mi madre: *qué rico es gastar cuando disfrutas la comida, y qué horrible cuando pagas caro y no la disfrutaste.*
+
+**Museos y cultura**
+
+| Orden | Criterio | Peso | Qué evalúo |
+|---|---|---|---|
+| 1 | Exposición | 35% | La calidad y el interés de las obras |
+| 2 | Experiencia y montaje | 20% | Cómo se presenta y se vive la visita |
+| 3 | Edificio | 15% | Arquitectura, instalaciones y comodidad |
+| 4 | Atención y orientación | 15% | Información, señalización y guías |
+| 5 | Calidad-precio | 15% | Lo que vale la entrada |
+
+Los museos cierran con un veredicto:
+
+| Calificación | Veredicto |
 |---|---|
-| Servicio | 30% |
-| Sabor | 35% |
-| Ambiente y presentación | 15% |
-| Calidad-precio | 20% |
-
-Los museos y lugares culturales tienen sus propios criterios, y cierran con un veredicto: *vale el viaje*, *vale el desvío* o *interesante*.
-
-| Museos y cultura | Peso |
-|---|---|
-| Exposición | 35% |
-| Experiencia y montaje | 20% |
-| Edificio e instalaciones | 15% |
-| Atención y orientación | 15% |
-| Calidad-precio | 15% |
+| 4.5 a 5 | Vale el viaje |
+| 3.5 a 4 | Vale el desvío |
+| Menos de 3.5 | Interesante |
 
 Cada reseña incluye una ficha rápida con el gasto aproximado, si conviene reservar y para qué ocasión es ideal.
 

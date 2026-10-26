@@ -8,7 +8,7 @@ category: Arte y cultura
 rating: 4.5
 verdict_label: "Vale el viaje"
 instagram:
-price_pp: "$60 MXN (mexicanos) · $85 MXN entrada general"
+price_pp: "$135 MXN con identificación nacional · $160 MXN general · martes entrada libre (tarifas oficiales)"
 reservation: "No se necesita"
 ideal_for: "Toda la familia"
 duration: "Alrededor de 2 horas y media"
@@ -34,6 +34,7 @@ gallery:
   - [/img/cabanas/a-quien-tu-decidiste-amar.jpg, "A quien tú decidiste amar · dibujo de Luis Selem"]
   - [/img/cabanas/las-mil-y-una-noches.jpg, "Las mil y una noches · dibujo de Laura Quintanilla"]
   - [/img/cabanas/la-puerta-negra.jpg, "La puerta negra · dibujo de Racrufi"]
+  - [/img/cabanas/cantautores.jpg, "Algunos de los cantautores presentes en el evento"]
   - [/img/cabanas/acordeon.jpg, "Acordeón de Jorge Mejía Avante"]
   - [/img/cabanas/cupula-hombre-de-fuego.jpg, "La cúpula con El Hombre de Fuego, de José Clemente Orozco"]
   - [/img/cabanas/murales-orozco.jpg, "La capilla mayor, cubierta con los murales de Orozco"]
@@ -58,7 +59,7 @@ No usamos visita guiada ni audioguía; nos basamos en la información de cada ob
 
 Lo único con área de oportunidad fue la orientación: en la entrada nos dijeron que el boleto incluía una visita guiada, pero no vimos a nadie que diera el recorrido.
 
-*Fuente sobre El Hombre de Fuego: [AFAR](https://www.afar.com/places/hospicio-cabanas-guadalajara).*
+*Fuentes: [AFAR](https://www.afar.com/places/hospicio-cabanas-guadalajara) (El Hombre de Fuego) y [sitio oficial del Museo Cabañas](https://museocabanas.jalisco.gob.mx/en) (tarifas).*
 
 ## Un poco de historia
 

@@ -43,3 +43,14 @@ footer{border-top:1px solid var(--line);text-align:center;color:var(--muted);fon
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}.chips a{padding:8px 14px;border-radius:999px;border:1px solid var(--line);color:var(--ink);text-decoration:none;font-size:14px;font-weight:600;background:var(--card)}.chips a.on{background:var(--accent);border-color:var(--accent);color:#fff}
 .label{display:inline-block;margin-left:8px;padding:3px 10px;border-radius:999px;background:var(--accent);color:#fff;font-size:13px;font-weight:600;vertical-align:middle}
 .prose table{border-collapse:collapse;margin:12px 0 20px;min-width:280px}.prose th,.prose td{border-bottom:1px solid var(--line);padding:8px 14px;text-align:left}
+.stars5{--p:0%;display:inline-block;position:relative;font-size:1.05em;line-height:1;letter-spacing:2px;vertical-align:-1px}
+.stars5::before{content:"★★★★★";color:var(--line)}
+.stars5::after{content:"★★★★★";color:var(--star);position:absolute;left:0;top:0;width:var(--p);overflow:hidden;white-space:nowrap}
+.scorecard{display:grid;grid-template-columns:170px 1fr;gap:20px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin:24px 0}
+.sc-total{text-align:center;border-right:1px solid var(--line);padding-right:16px}.sc-total .big{font:700 56px/1 Fraunces,serif}.sc-total .stars5{font-size:20px;margin:6px 0}.sc-total small{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
+.sc-table,.ficha table{width:100%;border-collapse:collapse;font-size:15px}.sc-table th{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);text-align:left;font-weight:600;padding:0 8px 8px}
+.sc-table td{padding:7px 8px;border-top:1px solid var(--line)}.sc-table .num{text-align:right;white-space:nowrap}.sc-table tfoot td{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:10px}
+.bar{height:8px;border-radius:99px;background:var(--line);overflow:hidden;min-width:80px}.bar i{display:block;height:100%;background:var(--star);border-radius:99px}
+.ficha table th{text-align:left;font-weight:400;color:var(--muted);padding:7px 16px 7px 0;width:38%;vertical-align:top;border-top:1px solid var(--line)}.ficha table td{padding:7px 0;border-top:1px solid var(--line)}
+.ficha tr:first-child th,.ficha tr:first-child td{border-top:0}
+@media (max-width:600px){.scorecard{grid-template-columns:1fr}.sc-total{border-right:0;border-bottom:1px solid var(--line);padding:0 0 14px}.ficha table th{width:45%}}

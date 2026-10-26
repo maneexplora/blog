@@ -1,5 +1,5 @@
 ---
-title: "Succo Italiano, Guadalajara: an honest review"
+title: "Succo Italiano, Zapopan: an honest review"
 city: Distrito La Perla, Zapopan, Jalisco, Mexico
 category: Italian restaurant
 excerpt: "Delicious octopus and gnocchi, refreshing drinks and solid service. Only the octopus portion fell short."

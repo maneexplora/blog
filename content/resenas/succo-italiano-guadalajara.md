@@ -1,5 +1,5 @@
 ---
-title: "Succo Italiano, Guadalajara: reseña honesta"
+title: "Succo Italiano, Zapopan: reseña honesta"
 slug: succo-italiano-guadalajara
 date: 2026-10-23
 place: Succo Italiano

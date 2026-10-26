@@ -1,5 +1,5 @@
 ---
-title: "Succo Italiano，瓜达拉哈拉：真实点评"
+title: "Succo Italiano，萨波潘：真实点评"
 city: 墨西哥 · 哈利斯科州萨波潘 · Distrito La Perla
 category: 意大利餐厅
 excerpt: "章鱼和意式土豆团子都很美味，饮品清爽，服务到位。唯一不足是章鱼分量偏少。"

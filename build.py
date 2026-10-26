@@ -72,6 +72,18 @@ def review(p):
     gal = "".join(f'<figure><img src="{g[0]}" alt="{esc(g[1])}" loading="lazy"><figcaption>{esc(g[1])}</figcaption></figure>' for g in p["gallery"][1:])
     ig = f' · <a href="https://www.instagram.com/{p["instagram"]}" rel="noopener">@{esc(p["instagram"])}</a>' if p.get("instagram") else ""
     rating = f'<div class="rating">{stars(p["rating"])}</div>' if p.get("rating") not in (None, "") else ""
+    sc = p.get("scores") or {}
+    scores = ("<div class=\"scores\">" + "".join(f'<div><span>{esc(k)}</span>{stars(v)}</div>' for k, v in sc.items()) + "</div>") if sc else ""
+    facts = [("Gasto aprox. por persona", p.get("price_pp")), ("Reservación", p.get("reservation")), ("Ideal para", p.get("ideal_for")),
+             ("¿Volvería?", p.get("would_return")), ("Fecha de visita", fdate(p["date"]))]
+    ficha = '<aside class="ficha"><h2>Ficha rápida</h2><dl>' + "".join(f"<dt>{k}</dt><dd>{esc(v)}</dd>" for k, v in facts if v) + "</dl>" + scores + "</aside>"
+    order = "".join(f"<li>{esc(x)}</li>" for x in (p.get("order") or []))
+    avoid = "".join(f"<li>{esc(x)}</li>" for x in (p.get("avoid") or []))
+    tips = ""
+    if order or avoid:
+        tips = '<div class="tips">' + (f'<div class="tip ok"><h3>Qué pedir</h3><ul>{order}</ul></div>' if order else "") + (f'<div class="tip no"><h3>Qué evitaría</h3><ul>{avoid}</ul></div>' if avoid else "") + "</div>"
+    disclosure = '<p class="disclosure">Transparencia: esta visita la pagué al 100%. Sin invitación ni patrocinio.</p>' if p.get("paid") else ""
+    author = '<div class="author"><img src="/img/manuel-avatar.jpg" alt="Manuel Alemán" loading="lazy"><p><b>Manuel Alemán</b><br>Planeador de profesión, explorador por gusto. Reseño cada lugar con el mismo método: servicio, sabor, presentación y calidad-precio. <a href="/sobre-mi/">Conoce mi método →</a></p></div>'
     ld = {"@context":"https://schema.org","@type":"Review","name":p["title"],"datePublished":str(p["date"]),
           "author":{"@type":"Person","name":"Manuel Alemán"},"publisher":{"@type":"Organization","name":SITE["name"]},
           "itemReviewed":{"@type":"Restaurant" if "Restaurante" in p["category"] or "Cafetería" in p["category"] else "Museum","name":p["place"],"address":p["city"]},
@@ -83,12 +95,16 @@ def review(p):
 <p class="byline">Por Manuel Alemán · {fdate(p['date'])}{ig}</p>
 {rating}
 <figure class="hero"><img src="{p['cover']}" alt="{esc(p['gallery'][0][1])}"><figcaption>{esc(p['gallery'][0][1])}</figcaption></figure>
+{ficha}
 <div class="prose">{p['html']}</div>
+{tips}
+{disclosure}
 {AD_SLOT()}
 <h2>Galería</h2><div class="gallery">{gal}</div>
 <h2>Cómo llegar y qué opina la gente</h2>
 <div class="map"><iframe title="Mapa de {esc(p['place'])}" src="https://www.google.com/maps?q={q}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 <p class="links"><a class="btn" href="https://www.google.com/maps/search/?api=1&query={q}" rel="noopener">Ver todas las reseñas en Google Maps ↗</a></p>
+{author}
 </article>"""
     return page(f"{p['title']} | {SITE['name']}", p["excerpt"], body, f"/resenas/{p['slug']}/", p["cover"], ld)
 

@@ -1,9 +1,28 @@
+<img class="about-photo" src="/img/manuel.jpg" alt="Manuel Alemán">
+
 Hola, soy **Manuel Alemán**.
 
-Mane Explora nació de algo sencillo: cada vez que visito un restaurante, una cafetería o un museo, me gusta contar cómo me fue de verdad. Lo bueno, lo mejorable y si vale la pena ir.
+Soy de **Ojocaliente**, un pueblo pequeño de Zacatecas, y he vivido en varios lugares de la República. Quizá por eso valoro tanto cuando un lugar muestra **calidad, autenticidad y, sobre todo, calidez** con quien lo visita.
 
-Aquí vas a encontrar **reseñas honestas**, con mis propias fotos y una calificación de 1 a 5 estrellas. No hay patrocinios ocultos: si algún día una visita es por invitación, lo voy a decir claramente.
+De profesión soy **Gerente de Planeación Global** en la industria de manufactura. Gracias a mi trabajo, en el último año he podido viajar constantemente, y en cada plática me preguntan lo mismo: *¿a dónde fuiste?, ¿qué me recomiendas?, ¿qué fue lo más rico?* Así nació Mane Explora: un pasatiempo para compartir mi opinión sobre los lugares que visito, pero hecho con la estructura y el estándar con los que trabajo todos los días.
 
-Cada viaje suma lugares nuevos, de México a donde nos lleve el camino.
+## Un plato que no olvido
 
-Sígueme en [Instagram](https://www.instagram.com/manediaz4gs) y [Pinterest](https://www.pinterest.com/manediaz4gs) para ver las reseñas en cuanto salen.
+He tenido la fortuna de comer en distintas partes del mundo, pero siempre recordaré un lugar en **El Cielo, en Gómez Farías**, Tamaulipas. Un guía nos llevó con una señora que cocinaba exquisito. El lugar era humilde, pero cálido, y el asado de puerco con arroz que nos sirvió era otra cosa. Esa comida resume lo que busco en cada visita.
+
+## Mi método
+
+Cada reseña sigue los mismos criterios, en este orden de importancia:
+
+1. **Servicio.** Siempre es lindo que te reciban con gusto en el lugar al que vas.
+2. **Sabor.** Es el corazón de cualquier comida.
+3. **Presentación.** Gana puntos cuando un platillo se ve tan bien como sabe.
+4. **Calidad-precio.** Como decía mi madre: *qué rico es gastar cuando disfrutas la comida, y qué horrible cuando pagas caro y no la disfrutaste.*
+
+Califico de **1 a 5 estrellas**, con medios puntos, igual que Google o TripAdvisor. Cada reseña incluye una ficha rápida con el gasto aproximado, si conviene reservar y para qué ocasión es ideal.
+
+## Transparencia
+
+Escribo en primera persona, aunque muchas veces comparto lo que más *nos* gustó a quienes me acompañan. Las visitas las pago yo. Si algún día una visita es por invitación, lo voy a decir claramente al inicio de la reseña.
+
+Sígueme en [Instagram](https://www.instagram.com/manediaz4gs) y [Pinterest](https://www.pinterest.com/manediaz4gs) para ver cada reseña en cuanto sale.

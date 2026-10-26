@@ -26,3 +26,17 @@ figcaption{font-size:14px;color:var(--muted);margin-top:6px}
 .ad{margin:32px 0;min-height:90px}
 footer{border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:14px;padding:28px 16px}
 @media (max-width:600px){nav a{margin-left:12px}.top{padding:16px}}
+.ficha{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin:24px 0}
+.ficha h2{font:700 20px/1.2 Fraunces,serif;margin:0 0 10px}
+.ficha dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:0;font-size:15px}.ficha dt{color:var(--muted)}.ficha dd{margin:0}
+.scores{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px 16px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:14px}
+.scores span{display:block;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.05em}
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:24px 0}
+.tip{border-radius:12px;padding:14px 18px;border:1px solid var(--line);background:var(--card)}.tip h3{margin:0 0 6px;font-size:16px}.tip ul{margin:0;padding-left:18px}
+.tip.ok{border-left:4px solid #3b8a4a}.tip.no{border-left:4px solid #b5541c}
+.disclosure{font-size:14px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+.author{display:flex;gap:14px;align-items:center;margin:36px 0 0;padding:16px;border:1px solid var(--line);border-radius:14px;background:var(--card);font-size:15px}
+.author img{width:64px;height:64px;border-radius:50%;object-fit:cover;flex:none}.author p{margin:0}
+.about-photo{float:right;width:240px;margin:0 0 16px 20px;border-radius:14px}
+@media (max-width:600px){.about-photo{float:none;width:100%;margin:0 0 16px}.ficha dl{grid-template-columns:1fr}.ficha dd{margin-bottom:6px}}
+.stars{white-space:nowrap}.scores .stars{letter-spacing:0;font-size:15px}.scores b{font-size:13px}

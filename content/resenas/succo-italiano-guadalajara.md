@@ -9,7 +9,16 @@ rating: 3.5
 instagram: succoitaliano
 map_query: Succo Cocina Italiana Plaza La Perla Guadalajara
 cover: /img/succo/pulpo-pepe.jpg
-excerpt: "Pulpo y ñoquis deliciosos, bebidas refrescantes y buen servicio. Solo la porción del pulpo se quedó corta."
+excerpt: "Pulpo y ñoquis deliciosos, bebidas refrescantes y un servicio correcto. Solo la porción del pulpo se quedó corta."
+price_pp: "≈ $700 MXN"
+reservation: "No. Un viernes en la noche había lugares disponibles, sin espera"
+ideal_for: "Cenar con amigos o en pareja, platicar y tomar un coctel"
+would_return: "Sí. Ya vamos en la tercera visita y no será la última"
+paid: true
+scores: {"Servicio": 3, "Sabor": 4, "Ambiente": 3, "Calidad-precio": 3}
+order:
+  - "Pulpo Pepe (si vas con hambre, pide algo más para compartir)"
+  - "Ñoquis en salsa de calabaza con prosciutto di Parma"
 gallery:
   - [/img/succo/pulpo-pepe.jpg, "Pulpo Pepe"]
   - [/img/succo/noquis.jpg, "Ñoquis en salsa de calabaza con pecorino, prosciutto di Parma y chalota frita"]
@@ -32,6 +41,10 @@ Succo es un restaurante de cocina italiana contemporánea: pasta fresca hecha en
 ## A mejorar
 
 - **La porción del pulpo.** Algo pequeña para lo rico que está.
+
+## Por qué sigo regresando
+
+Esta fue nuestra tercera cena en Succo y no creo que sea la última. Hasta ahora no he probado algo que no me guste. Además, Plaza La Perla es muy bonita y su arquitectura invita a regresar; es de mis plazas favoritas en Guadalajara.
 
 ## Veredicto
 

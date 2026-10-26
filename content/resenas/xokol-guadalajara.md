@@ -21,6 +21,8 @@ gallery:
 
 Hay lugares donde comes bien, y hay lugares donde cada bocado te sorprende. Xokol es de los segundos, y no es casualidad: tiene una estrella en la Guía Michelin México 2026.
 
+Xokol está en la colonia Santa Teresita y lo dirigen los chefs Óscar Segundo y Xrysw Ruelas Díaz. *Fuente: [Excélsior](https://www.excelsior.com.mx/recetas/restaurantes-con-estrella-michelin-2026).*
+
 ## Lo bueno
 
 - **La constancia.** El menú cambia constantemente, pero el sabor se mantiene cálido y constante en cada visita.

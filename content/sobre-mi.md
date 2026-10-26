@@ -15,7 +15,7 @@ Califico de **1 a 5 estrellas**, con medios puntos, igual que Google o TripAdvis
 **Restaurantes y cafés**
 
 | Orden | Criterio | Peso | Qué evalúo |
-|---|---|---|---|
+|:-:|---|:-:|---|
 | 1 | Servicio | 35% | Que te reciban con gusto y te atiendan bien |
 | 2 | Sabor | 30% | El corazón de cualquier comida |
 | 3 | Ambiente y presentación | 15% | El lugar y cómo llegan los platillos a la mesa |
@@ -26,7 +26,7 @@ Sobre calidad-precio, como decía mi madre: *qué rico es gastar cuando disfruta
 **Museos y cultura**
 
 | Orden | Criterio | Peso | Qué evalúo |
-|---|---|---|---|
+|:-:|---|:-:|---|
 | 1 | Exposición | 35% | La calidad y el interés de las obras |
 | 2 | Experiencia y montaje | 20% | Cómo se presenta y se vive la visita |
 | 3 | Edificio | 15% | Arquitectura, instalaciones y comodidad |
@@ -36,7 +36,7 @@ Sobre calidad-precio, como decía mi madre: *qué rico es gastar cuando disfruta
 Los museos cierran con un veredicto:
 
 | Calificación | Veredicto |
-|---|---|
+|:-:|---|
 | 4.5 a 5 | Vale el viaje |
 | 3.5 a 4 | Vale el desvío |
 | Menos de 3.5 | Interesante |

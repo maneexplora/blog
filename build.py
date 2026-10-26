@@ -37,13 +37,22 @@ def weighted(sc):
 def verdict(r):
     return "Vale el viaje" if r >= 4.5 else ("Vale el desvío" if r >= 3.5 else "Interesante")
 
+def tables(h):
+    """Da a las tablas de Markdown el estilo único del sitio; las de 4+ columnas pueden desplazarse en celular."""
+    import re
+    def fix(m):
+        head = m.group(1)
+        cls = "tbl wide" if head.count("<th") >= 4 else "tbl"
+        return f'<table class="{cls}">' + head
+    return re.sub(r"<table>(.*?</tr>)", fix, h, flags=re.S)
+
 def load():
     posts = []
     for f in glob.glob(os.path.join(ROOT, "content/resenas/*.md")):
         raw = open(f, encoding="utf-8").read()
         _, fm, body = raw.split("---", 2)
         meta = yaml.safe_load(fm)
-        meta["html"] = markdown.markdown(body, extensions=["extra"])
+        meta["html"] = tables(markdown.markdown(body, extensions=["extra"]))
         if meta.get("scores"): meta["rating"] = weighted(meta["scores"])[1]
         posts.append(meta)
     return sorted(posts, key=lambda p: p["date"], reverse=True)
@@ -95,16 +104,16 @@ def review(p):
         raw, final, w = weighted(sc)
         p["rating"] = final
         label = p.get("verdict_label") and verdict(final)
-        rows = "".join(f'<tr><td>{esc(k)}</td><td class="num">{w[k]*100:.0f}%</td><td><div class="bar"><i style="width:{v/5*100:.0f}%"></i></div></td><td class="num"><b>{v:g}</b></td></tr>' for k, v in sc.items())
-        scorecard = (f'<section class="scorecard"><div class="sc-total"><div class="big">{final:g}</div>{stars(final, False)}<small>de 5</small>'
+        rows = "".join(f'<tr><td>{esc(k)}</td><td class="num">{w[k]*100:.0f}%</td><td class="score">{stars(v, False)}<b>{v:g}/5</b></td></tr>' for k, v in sc.items())
+        scorecard = (f'<section class="scorecard" aria-label="Calificación"><div class="sc-head"><div class="big">{final:g}</div><div>{stars(final, False)}<div class="of">de 5 · calificación general</div></div>'
                      + (f'<span class="label">{label}</span>' if label else "") + '</div>'
-                     + f'<table class="sc-table"><thead><tr><th>Criterio</th><th class="num">Peso</th><th>Calificación</th><th class="num">/5</th></tr></thead><tbody>{rows}</tbody>'
-                     + f'<tfoot><tr><td colspan="4">Promedio ponderado: {raw:.2f} → {final:g} (redondeo a medio punto). <a href="/sobre-mi/#metodo">Ver método</a></td></tr></tfoot></table></section>')
+                     + f'<table class="tbl"><thead><tr><th>Criterio</th><th class="num">Peso</th><th>Calificación</th></tr></thead><tbody>{rows}</tbody>'
+                     + f'<tfoot><tr><td colspan="3">Promedio ponderado: {raw:.2f} → {final:g}, redondeado a medio punto. <a href="/sobre-mi/#metodo">Ver mi método</a></td></tr></tfoot></table></section>')
     if p.get("rating") not in (None, ""):
         rating = f'<div class="rating">{stars(p["rating"])}</div>'
     facts = [("Gasto aprox. por persona", p.get("price_pp")), ("Reservación", p.get("reservation")), ("Tiempo de visita", p.get("duration")), ("Ideal para", p.get("ideal_for")),
              ("¿Volvería?", p.get("would_return")), ("Fecha de visita", fdate(p["date"]))]
-    ficha = '<section class="ficha"><h2>Ficha rápida</h2><table>' + "".join(f"<tr><th>{k}</th><td>{esc(v)}</td></tr>" for k, v in facts if v) + "</table></section>"
+    ficha = '<section class="ficha"><h2>Ficha rápida</h2><table class="tbl">' + "".join(f'<tr><th scope="row">{k}</th><td>{esc(v)}</td></tr>' for k, v in facts if v) + "</table></section>"
     order = "".join(f"<li>{esc(x)}</li>" for x in (p.get("order") or []))
     avoid = "".join(f"<li>{esc(x)}</li>" for x in (p.get("avoid") or []))
     tips = ""
@@ -138,7 +147,7 @@ def review(p):
     return page(f"{p['title']} | {SITE['name']}", p["excerpt"], body, f"/resenas/{p['slug']}/", p["cover"], ld)
 
 def static_page(slug, title, md):
-    return page(f"{title} | {SITE['name']}", SITE["desc"], f'<article class="review"><h1>{esc(title)}</h1><div class="prose">{markdown.markdown(md, extensions=["extra"])}</div></article>', f"/{slug}/")
+    return page(f"{title} | {SITE['name']}", SITE["desc"], f'<article class="review"><h1>{esc(title)}</h1><div class="prose">{tables(markdown.markdown(md, extensions=["extra"]))}</div></article>', f"/{slug}/")
 
 def write(path, txt):
     full = os.path.join(DIST, path.lstrip("/"))

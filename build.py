@@ -62,6 +62,10 @@ def page(title, desc, body, path, image=None, jsonld=None):
 <p><a href="/sobre-mi/">Sobre mí</a> · <a href="/privacidad/">Privacidad</a> · <a href="/rss.xml">RSS</a> · <a href="https://www.instagram.com/{SITE['instagram']}">Instagram</a> · <a href="https://www.pinterest.com/{SITE['pinterest']}">Pinterest</a></p></footer>
 </body></html>"""
 
+SECTIONS = [("restaurantes", "Restaurantes y cafés", lambda p: "Arte" not in p["category"]), ("arte-y-cultura", "Arte y cultura", lambda p: "Arte" in p["category"])]
+def chips(active=None):
+    return '<nav class="chips"><a href="/"' + (' class="on"' if not active else '') + '>Todas</a>' + "".join(f'<a href="/categoria/{k}/"' + (' class="on"' if k == active else '') + f'>{n}</a>' for k, n, _ in SECTIONS) + '</nav>'
+
 def card(p):
     return f"""<a class="card" href="/resenas/{p['slug']}/"><img src="{p['cover']}" alt="{esc(p['place'])}" loading="lazy">
 <div class="card-b"><span class="cat">{esc(p['category'])} · {esc(p['city'])}</span><h2>{esc(p['place'])}</h2>
@@ -71,17 +75,17 @@ def review(p):
     q = urllib.parse.quote(p["map_query"])
     gal = "".join(f'<figure><img src="{g[0]}" alt="{esc(g[1])}" loading="lazy"><figcaption>{esc(g[1])}</figcaption></figure>' for g in p["gallery"][1:])
     ig = f' · <a href="https://www.instagram.com/{p["instagram"]}" rel="noopener">@{esc(p["instagram"])}</a>' if p.get("instagram") else ""
-    rating = f'<div class="rating">{stars(p["rating"])}</div>' if p.get("rating") not in (None, "") else ""
+    rating = f'<div class="rating">{stars(p["rating"])}' + (f' <span class="label">{esc(p["verdict_label"])}</span>' if p.get("verdict_label") else "") + '</div>' if p.get("rating") not in (None, "") else ""
     sc = p.get("scores") or {}
     scores = ("<div class=\"scores\">" + "".join(f'<div><span>{esc(k)}</span>{stars(v)}</div>' for k, v in sc.items()) + "</div>") if sc else ""
-    facts = [("Gasto aprox. por persona", p.get("price_pp")), ("Reservación", p.get("reservation")), ("Ideal para", p.get("ideal_for")),
+    facts = [("Gasto aprox. por persona", p.get("price_pp")), ("Reservación", p.get("reservation")), ("Tiempo de visita", p.get("duration")), ("Ideal para", p.get("ideal_for")),
              ("¿Volvería?", p.get("would_return")), ("Fecha de visita", fdate(p["date"]))]
     ficha = '<aside class="ficha"><h2>Ficha rápida</h2><dl>' + "".join(f"<dt>{k}</dt><dd>{esc(v)}</dd>" for k, v in facts if v) + "</dl>" + scores + "</aside>"
     order = "".join(f"<li>{esc(x)}</li>" for x in (p.get("order") or []))
     avoid = "".join(f"<li>{esc(x)}</li>" for x in (p.get("avoid") or []))
     tips = ""
     if order or avoid:
-        tips = '<div class="tips">' + (f'<div class="tip ok"><h3>Qué pedir</h3><ul>{order}</ul></div>' if order else "") + (f'<div class="tip no"><h3>Qué evitaría</h3><ul>{avoid}</ul></div>' if avoid else "") + "</div>"
+        tips = '<div class="tips">' + (f'<div class="tip ok"><h3>{esc(p.get("order_title","Qué pedir"))}</h3><ul>{order}</ul></div>' if order else "") + (f'<div class="tip no"><h3>{esc(p.get("avoid_title","Qué evitaría"))}</h3><ul>{avoid}</ul></div>' if avoid else "") + "</div>"
     disclosure = '<p class="disclosure">Transparencia: esta visita la pagué al 100%. Sin invitación ni patrocinio.</p>' if p.get("paid") else ""
     author = '<div class="author"><img src="/img/manuel-avatar.jpg" alt="Manuel Alemán" loading="lazy"><p><b>Manuel Alemán</b><br>Planeador de profesión, explorador por gusto. Reseño cada lugar con el mismo método: servicio, sabor, presentación y calidad-precio. <a href="/sobre-mi/">Conoce mi método →</a></p></div>'
     ld = {"@context":"https://schema.org","@type":"Review","name":p["title"],"datePublished":str(p["date"]),
@@ -109,7 +113,7 @@ def review(p):
     return page(f"{p['title']} | {SITE['name']}", p["excerpt"], body, f"/resenas/{p['slug']}/", p["cover"], ld)
 
 def static_page(slug, title, md):
-    return page(f"{title} | {SITE['name']}", SITE["desc"], f'<article class="review"><h1>{esc(title)}</h1><div class="prose">{markdown.markdown(md)}</div></article>', f"/{slug}/")
+    return page(f"{title} | {SITE['name']}", SITE["desc"], f'<article class="review"><h1>{esc(title)}</h1><div class="prose">{markdown.markdown(md, extensions=["extra"])}</div></article>', f"/{slug}/")
 
 def write(path, txt):
     full = os.path.join(DIST, path.lstrip("/"))
@@ -121,16 +125,19 @@ def main():
     shutil.copytree(os.path.join(ROOT, "static"), DIST)
     posts = load()
     hero = f"""<section class="intro"><h1>{SITE['tagline']}</h1><p>Lo bueno, lo mejorable y si vale la pena ir. Sin filtros ni patrocinios ocultos.</p></section>"""
-    write("index.html", page(f"{SITE['name']} · {SITE['tagline']}", SITE["desc"], hero + '<section class="grid">' + "".join(card(p) for p in posts) + "</section>", "/", posts[0]["cover"] if posts else None,
+    write("index.html", page(f"{SITE['name']} · {SITE['tagline']}", SITE["desc"], hero + chips() + '<section class="grid">' + "".join(card(p) for p in posts) + "</section>", "/", posts[0]["cover"] if posts else None,
         {"@context":"https://schema.org","@type":"WebSite","name":SITE["name"],"url":SITE["url"]}))
     for p in posts: write(f"resenas/{p['slug']}/index.html", review(p))
+    for k, n, f in SECTIONS:
+        sel = [p for p in posts if f(p)]
+        write(f"categoria/{k}/index.html", page(f"{n} | {SITE['name']}", f"Reseñas honestas de {n.lower()}.", f'<section class="intro"><h1>{n}</h1></section>' + chips(k) + '<section class="grid">' + "".join(card(p) for p in sel) + "</section>", f"/categoria/{k}/"))
     for slug, title in [("sobre-mi","Sobre mí"),("privacidad","Política de privacidad")]:
         write(f"{slug}/index.html", static_page(slug, title, open(os.path.join(ROOT, f"content/{slug}.md"), encoding="utf-8").read()))
     write("404.html", page(f"Página no encontrada | {SITE['name']}", SITE["desc"], '<section class="intro"><h1>Esta página no existe</h1><p><a href="/">Volver a las reseñas</a></p></section>', "/404"))
     # RSS
     items = "".join(f"<item><title>{esc(p['title'])}</title><link>{SITE['url']}/resenas/{p['slug']}/</link><guid>{SITE['url']}/resenas/{p['slug']}/</guid><pubDate>{datetime.datetime.combine(p['date'], datetime.time(10)).strftime('%a, %d %b %Y %H:%M:%S -0600')}</pubDate><description>{esc(p['excerpt'])}</description><enclosure url=\"{SITE['url']}{p['cover']}\" type=\"image/jpeg\" length=\"0\"/></item>" for p in posts)
     write("rss.xml", f'<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>{SITE["name"]}</title><link>{SITE["url"]}</link><description>{esc(SITE["desc"])}</description><language>es</language>{items}</channel></rss>')
-    urls = ["/", "/sobre-mi/", "/privacidad/"] + [f"/resenas/{p['slug']}/" for p in posts]
+    urls = ["/", "/sobre-mi/", "/privacidad/"] + [f"/categoria/{k}/" for k, _, _ in SECTIONS] + [f"/resenas/{p['slug']}/" for p in posts]
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(f"<url><loc>{SITE['url']}{u}</loc></url>" for u in urls) + "</urlset>")
     write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {SITE['url']}/sitemap.xml\n")
     print(f"OK: {len(posts)} reseñas -> dist/")

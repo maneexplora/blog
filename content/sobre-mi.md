@@ -19,7 +19,26 @@ Cada reseña sigue los mismos criterios, en este orden de importancia:
 3. **Presentación.** Gana puntos cuando un platillo se ve tan bien como sabe.
 4. **Calidad-precio.** Como decía mi madre: *qué rico es gastar cuando disfrutas la comida, y qué horrible cuando pagas caro y no la disfrutaste.*
 
-Califico de **1 a 5 estrellas**, con medios puntos, igual que Google o TripAdvisor. Cada reseña incluye una ficha rápida con el gasto aproximado, si conviene reservar y para qué ocasión es ideal.
+Califico de **1 a 5 estrellas**, con medios puntos, igual que Google o TripAdvisor. La calificación general no es un promedio simple: es un **promedio ponderado** según la importancia de cada criterio, redondeado a medio punto.
+
+| Restaurantes y cafés | Peso |
+|---|---|
+| Servicio | 30% |
+| Sabor | 35% |
+| Ambiente y presentación | 15% |
+| Calidad-precio | 20% |
+
+Los museos y lugares culturales tienen sus propios criterios, y cierran con un veredicto: *vale el viaje*, *vale el desvío* o *interesante*.
+
+| Museos y cultura | Peso |
+|---|---|
+| Exposición | 35% |
+| Experiencia y montaje | 20% |
+| Edificio e instalaciones | 15% |
+| Atención y orientación | 15% |
+| Calidad-precio | 15% |
+
+Cada reseña incluye una ficha rápida con el gasto aproximado, si conviene reservar y para qué ocasión es ideal.
 
 ## Transparencia
 

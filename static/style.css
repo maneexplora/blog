@@ -40,3 +40,6 @@ footer{border-top:1px solid var(--line);text-align:center;color:var(--muted);fon
 .about-photo{float:right;width:240px;margin:0 0 16px 20px;border-radius:14px}
 @media (max-width:600px){.about-photo{float:none;width:100%;margin:0 0 16px}.ficha dl{grid-template-columns:1fr}.ficha dd{margin-bottom:6px}}
 .stars{white-space:nowrap}.scores .stars{letter-spacing:0;font-size:15px}.scores b{font-size:13px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 22px}.chips a{padding:8px 14px;border-radius:999px;border:1px solid var(--line);color:var(--ink);text-decoration:none;font-size:14px;font-weight:600;background:var(--card)}.chips a.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.label{display:inline-block;margin-left:8px;padding:3px 10px;border-radius:999px;background:var(--accent);color:#fff;font-size:13px;font-weight:600;vertical-align:middle}
+.prose table{border-collapse:collapse;margin:12px 0 20px;min-width:280px}.prose th,.prose td{border-bottom:1px solid var(--line);padding:8px 14px;text-align:left}

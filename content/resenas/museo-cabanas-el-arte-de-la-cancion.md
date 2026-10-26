@@ -5,8 +5,22 @@ date: 2026-10-24
 place: Museo Cabañas
 city: Guadalajara, México
 category: Arte y cultura
-rating:
+rating: 4.5
+verdict_label: "Vale el viaje"
 instagram:
+price_pp: "$60 MXN (mexicanos) · $85 MXN entrada general"
+reservation: "No se necesita"
+duration: "Alrededor de 2 horas y media"
+would_return: "Sí: las exposiciones cambian constantemente"
+paid: true
+scores: {"Exposición": 5, "Experiencia y montaje": 5, "Edificio": 5, "Atención y orientación": 2, "Calidad-precio": 4}
+order_title: "Qué no perderse"
+order:
+  - "El Arte de la Canción: cada cédula tiene un QR que te lleva a la canción en Spotify"
+  - "El Hombre de Fuego, el fresco de Orozco en la cúpula"
+avoid_title: "A considerar"
+avoid:
+  - "Pregunta en la entrada por la visita guiada incluida: nosotros no encontramos quién la diera"
 map_query: Museo Cabañas Guadalajara
 cover: /img/cabanas/fachada.jpg
 excerpt: "88 dibujos inspirados en 88 canciones mexicanas, dentro de uno de los edificios más impresionantes de México."
@@ -31,6 +45,16 @@ La dinámica del día de nuestra visita fue lo mejor: mientras recorrías la gal
 
 Además de los dibujos, la exposición incluye objetos de leyendas de la música mexicana, como el acordeón de Jorge Mejía Avante y piezas de Rigo Tovar.
 
+## Nuestra visita
+
+Fuimos un sábado entre las 12 y la 1 de la tarde. Había poca gente: los asistentes al evento y quizá otras 60 personas repartidas en un museo que es bastante grande. El recorrido nos tomó alrededor de dos horas y media.
+
+No usamos visita guiada ni audioguía; nos basamos en la información de cada obra. Lo que más nos gustó fue que en los dibujos el QR de la cédula te lleva directo a la canción en Spotify, y además hubo música en vivo. Fuera de la exposición hay otras obras muy lindas, los murales y la cúpula con *El Hombre de Fuego* de Orozco.
+
+Lo único con área de oportunidad fue la orientación: en la entrada nos dijeron que el boleto incluía una visita guiada, pero no vimos a nadie que diera el recorrido.
+
+*Fuente sobre El Hombre de Fuego: [AFAR](https://www.afar.com/places/hospicio-cabanas-guadalajara).*
+
 ## Un poco de historia
 
 El edificio fue encargado por el obispo Juan Cruz Ruiz de Cabañas y diseñado por el arquitecto Manuel Tolsá. Se construyó entre 1805 y 1810 como la Casa de la Caridad y la Misericordia, pensada para dar refugio a miles de niños. Funcionó como hospicio hasta 1980 y desde 1983 es un centro cultural.
@@ -41,4 +65,4 @@ En su interior están los 57 frescos que José Clemente Orozco comenzó a pintar
 
 ## Veredicto
 
-Un plan cultural imperdible en Guadalajara: arte, música e historia en un solo recorrido.
+**Vale el viaje.** Un plan cultural imperdible en Guadalajara: arte, música e historia en un solo recorrido. Volvería sin duda, porque las exposiciones cambian constantemente; hace unos meses, por ejemplo, exhibieron una obra de Diego Rivera que no alcancé a ver.

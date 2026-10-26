@@ -7,7 +7,7 @@ city: Guadalajara, México
 category: Arte y cultura
 rating: 4.5
 verdict_label: "Vale el viaje"
-instagram:
+instagram: museocabanas
 price_pp: "$135 MXN con identificación nacional · $160 MXN general · martes entrada libre (tarifas oficiales)"
 reservation: "No se necesita"
 ideal_for: "Toda la familia"

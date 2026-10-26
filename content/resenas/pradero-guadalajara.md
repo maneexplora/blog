@@ -21,6 +21,8 @@ gallery:
 
 Un lugar lindo en general, pero con detalles que vale la pena contar.
 
+Pradero se presenta como "comida para compartir" con un menú campestre: chilaquiles, huevos, sándwiches, pan dulce y una carta de café y "bebidas coquetas", más especiales de temporada como el Pumpkin Spice Latte. *Fuente: su menú impreso, en nuestra visita.*
+
 ## Lo bueno
 
 - **El ambiente.** Todo está decorado con temática de cosecha: calabazas, flores secas y un patio lleno de plantas que da ganas de quedarse.

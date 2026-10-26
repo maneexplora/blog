@@ -3,7 +3,7 @@ title: "Succo Italiano, Guadalajara: reseña honesta"
 slug: succo-italiano-guadalajara
 date: 2026-10-23
 place: Succo Italiano
-city: Distrito La Perla, Guadalajara, México
+city: Distrito La Perla, Zapopan, Jalisco
 category: Restaurante italiano
 rating: 3.5
 instagram: succoitaliano
@@ -20,6 +20,8 @@ gallery:
 ---
 
 Una noche de buena mesa y mejor compañía en Distrito La Perla.
+
+Succo es un restaurante de cocina italiana contemporánea: pasta fresca hecha en casa, pizzas en horno de piedra y platos a la parrilla de leña, con terraza amplia, cocina abierta y una barra central. Su chef ejecutivo es Javier Arvizu y el precio va de unos 310 a 500 pesos por persona. *Fuente: [ficha del restaurante en OpenTable](https://www.opentable.com/r/succo-zapopan).*
 
 ## Lo bueno
 

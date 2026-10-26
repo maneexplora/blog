@@ -12,6 +12,10 @@ Este sitio puede mostrar anuncios de **Google AdSense**. Google y sus socios usa
 
 Más información sobre cómo usa Google los datos: [Políticas de privacidad de Google](https://policies.google.com/technologies/partner-sites).
 
+## Estadísticas de visitas
+
+Uso **Metricool** para contar visitas y saber qué páginas se leen y desde qué país. Su medición no usa cookies.
+
 ## Mapas y contenido de terceros
 
 Las reseñas incluyen mapas de Google Maps. Al cargarlos, Google puede recopilar datos según su propia política de privacidad.

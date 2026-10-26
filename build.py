@@ -181,6 +181,8 @@ def load():
     for l in LANGS: posts[l].sort(key=lambda p: p["date"], reverse=True)
     return posts
 
+# Analítica web de Metricool (sin cookies). Hash de la marca Mane Explora en Metricool.
+METRICOOL = '<script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"1a0a11f14e3e3431d40b49342240c54a"})});</script>'
 ADS_HEAD = lambda: (f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={SITE["adsense_client"]}" crossorigin="anonymous"></script>' if SITE["adsense_client"] else "")
 AD_SLOT = lambda: ('<div class="ad"><ins class="adsbygoogle" style="display:block" data-ad-format="auto" data-full-width-responsive="true" data-ad-client="%s"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>' % SITE["adsense_client"] if SITE["adsense_client"] else "")
 
@@ -210,7 +212,7 @@ def page(lang, title, desc, body, alts, image=None, jsonld=None, nav=None):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" type="application/rss+xml" title="{SITE['name']}" href="/rss.xml">
 {fonts}
-<link rel="stylesheet" href="/style.css?v={CSS_V}">{ADS_HEAD()}{ld}
+<link rel="stylesheet" href="/style.css?v={CSS_V}">{ADS_HEAD()}{ld}{METRICOOL}
 </head><body>
 <header class="top"><a class="logo" href="{home}">Mane <span>Explora</span></a>
 <div class="top-r"><nav><a href="{home}">{t['nav_reviews']}</a><a href="{about}">{t['nav_about']}</a><a href="https://www.instagram.com/{SITE['instagram']}" rel="noopener">Instagram</a></nav>{switch}</div></header>

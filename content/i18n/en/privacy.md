@@ -12,6 +12,10 @@ This site may show **Google AdSense** ads. Google and its partners use cookies t
 
 More information on how Google uses data: [Google Privacy & Terms](https://policies.google.com/technologies/partner-sites).
 
+## Visit statistics
+
+I use **Metricool** to count visits and see which pages are read and from which country. Its tracking does not use cookies.
+
 ## Maps and third-party content
 
 Reviews include Google Maps. When they load, Google may collect data according to its own privacy policy.

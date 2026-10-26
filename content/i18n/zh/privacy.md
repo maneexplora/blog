@@ -12,6 +12,10 @@
 
 了解 Google 如何使用数据：[Google 隐私权政策](https://policies.google.com/technologies/partner-sites)。
 
+## 访问统计
+
+我使用 **Metricool** 统计访问量，了解哪些页面被阅读以及访客来自哪个国家。其统计不使用 Cookie。
+
 ## 地图与第三方内容
 
 点评页面包含 Google 地图链接。加载时，Google 可能会根据其隐私政策收集数据。

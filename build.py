@@ -17,6 +17,8 @@ SITE = {
     "adsense_client": "",  # ej. "ca-pub-1234567890" cuando AdSense apruebe el sitio
 }
 ROOT = os.path.dirname(os.path.abspath(__file__))
+import hashlib
+CSS_V = hashlib.md5(open(os.path.join(ROOT, "static/style.css"), "rb").read()).hexdigest()[:8]  # cambia con cada cambio de diseño
 DIST = os.path.join(ROOT, "dist")
 LANGS = ["es", "en", "zh"]
 HTML_LANG = {"es": "es", "en": "en", "zh": "zh-Hans"}
@@ -208,7 +210,7 @@ def page(lang, title, desc, body, alts, image=None, jsonld=None, nav=None):
 <meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" type="application/rss+xml" title="{SITE['name']}" href="/rss.xml">
 {fonts}
-<link rel="stylesheet" href="/style.css">{ADS_HEAD()}{ld}
+<link rel="stylesheet" href="/style.css?v={CSS_V}">{ADS_HEAD()}{ld}
 </head><body>
 <header class="top"><a class="logo" href="{home}">Mane <span>Explora</span></a>
 <div class="top-r"><nav><a href="{home}">{t['nav_reviews']}</a><a href="{about}">{t['nav_about']}</a><a href="https://www.instagram.com/{SITE['instagram']}" rel="noopener">Instagram</a></nav>{switch}</div></header>

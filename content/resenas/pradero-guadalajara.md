@@ -15,6 +15,10 @@ reservation: "No. Hubo lista de espera"
 ideal_for: "Almorzar y platicar: la música tiene un volumen que permite buena conversación"
 would_return: "Probablemente no"
 paid: true
+stories:
+  - {photo: /img/pradero/matcha-borrego.jpg, text: "Desayuno de otoño en Pradero", sticker: mention}
+  - {photo: /img/pradero/pumpkin-spice-latte.jpg, text: "¿Cuál pedirías?", sticker: poll}
+  - {photo: /img/pradero/patio.jpg, text: "Reseña completa: ficha, precios y calificación", sticker: link}
 scores: {"Servicio": 3, "Sabor": 2, "Ambiente": 4, "Calidad-precio": 3}
 order:
   - "Matcha Borrego"

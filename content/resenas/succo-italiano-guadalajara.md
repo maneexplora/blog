@@ -15,6 +15,10 @@ reservation: "No. Un viernes en la noche había lugares disponibles, sin espera"
 ideal_for: "Cenar con amigos o en pareja, platicar y tomar un coctel"
 would_return: "Sí. Ya vamos en la tercera visita y no será la última"
 paid: true
+stories:
+  - {photo: /img/succo/pulpo-pepe.jpg, text: "Noche italiana en Distrito La Perla", sticker: mention}
+  - {photo: /img/succo/noquis.jpg, text: "¿Equipo pulpo o equipo ñoquis?", sticker: poll}
+  - {photo: /img/succo/pink-flamingo.jpg, text: "Reseña completa: ficha, precios y calificación", sticker: link}
 scores: {"Servicio": 3, "Sabor": 4, "Ambiente": 3, "Calidad-precio": 3}
 order:
   - "Pulpo Pepe (si vas con hambre, pide algo más para compartir)"

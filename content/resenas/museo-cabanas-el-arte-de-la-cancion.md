@@ -15,9 +15,9 @@ duration: "Alrededor de 2 horas y media"
 would_return: "Sí: las exposiciones cambian constantemente"
 paid: true
 stories:
-  - {photo: /img/cabanas/fachada.jpg, text: "Arte y música en el Museo Cabañas", sticker: mention}
-  - {photo: /img/cabanas/cupula-hombre-de-fuego.jpg, text: "¿Conocías El Hombre de Fuego de Orozco?", sticker: poll}
-  - {photo: /img/cabanas/eres.jpg, text: "Reseña completa: precios, tiempo de visita e historia", sticker: link}
+  - {photo: /img/cabanas/fachada.jpg, text: "Arte y música en el @museocabanas, Guadalajara", sticker: none}
+  - {photo: /img/cabanas/cupula-hombre-de-fuego.jpg, text: "El Hombre de Fuego, de Orozco: no te vayas sin verlo", sticker: none}
+  - {photo: /img/cabanas/eres.jpg, text: "Reseña completa en maneexplora.com (link en mi perfil)", sticker: none}
 scores: {"Exposición": 5, "Experiencia y montaje": 5, "Edificio": 5, "Atención y orientación": 2, "Calidad-precio": 4}
 order_title: "Qué no perderse"
 order:

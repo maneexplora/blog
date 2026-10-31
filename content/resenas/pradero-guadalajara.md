@@ -11,6 +11,8 @@ map_query: Pradero Guadalajara Jalisco
 cover: /img/pradero/matcha-borrego.jpg
 excerpt: "Un lugar lindo, con ambiente de cosecha y bebidas preciosas. La comida todavía tiene área de oportunidad."
 price_pp: "$250 a $300 MXN"
+price: {min: 250, max: 300, currency: MXN}
+fx: {"date": "2026-10-31", "source": "Exchange API (fawazahmed0), datos diarios", "rates": {"USD": 0.053227, "CNY": 0.354308, "EUR": 0.047686}}
 reservation: "No. Hubo lista de espera"
 ideal_for: "Almorzar y platicar: la música tiene un volumen que permite buena conversación"
 would_return: "Probablemente no"

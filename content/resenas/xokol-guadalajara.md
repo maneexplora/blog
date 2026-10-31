@@ -11,6 +11,8 @@ map_query: Xokol Guadalajara Jalisco
 cover: /img/xokol/tortilla-virgen.jpg
 excerpt: "Una estrella Michelin bien ganada. Todo gira alrededor del maíz. Cada platillo estuvo delicioso, y el lechón en pipián verde nos llevó directo al rancho."
 price_pp: "≈ $1,100 MXN"
+price: {min: 1100, currency: MXN, approx: true}
+fx: {"date": "2026-10-31", "source": "Exchange API (fawazahmed0), datos diarios", "rates": {"USD": 0.053227, "CNY": 0.354308, "EUR": 0.047686}}
 reservation: "Sí, y lo recomiendo. La mesa es por un máximo de 2 horas, así las reservaciones salen a tiempo."
 ideal_for: "Una cita en pareja, un cumpleaños o probar algo nuevo con amigos"
 would_return: "Sí, ahora con un grupo más grande"

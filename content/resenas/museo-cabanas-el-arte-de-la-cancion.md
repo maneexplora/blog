@@ -9,6 +9,9 @@ rating: 4.5
 verdict_label: "Vale el viaje"
 instagram: museocabanas
 price_pp: "$135 MXN con identificación nacional · $160 MXN general · martes entrada libre (tarifas oficiales)"
+price: {min: 135, max: 160, currency: MXN}
+fx: {"date": "2026-10-31", "source": "Exchange API (fawazahmed0), datos diarios", "rates": {"USD": 0.053227, "CNY": 0.354308, "EUR": 0.047686}}
+price_note: "135 con identificación nacional y 160 general; martes entrada libre (tarifas oficiales)"
 reservation: "No se necesita"
 ideal_for: "Toda la familia"
 duration: "Alrededor de 2 horas y media"

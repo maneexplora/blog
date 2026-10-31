@@ -4,6 +4,7 @@ city: Guadalajara, Mexico
 category: Art & culture
 excerpt: "88 drawings inspired by 88 Mexican songs, inside one of the most impressive buildings in Mexico."
 price_pp: "$135 MXN with Mexican ID · $160 MXN general · free on Tuesdays (official prices)"
+price_note: "135 with Mexican ID and 160 general; free on Tuesdays (official prices)"
 reservation: "Not needed"
 ideal_for: "The whole family"
 duration: "About two and a half hours"

@@ -107,3 +107,8 @@ figcaption{font-size:14px;color:var(--muted);margin-top:8px}
   .scorecard .tbl td .stars5{font-size:15px}.scorecard .tbl td.score b{margin-left:6px}
   .prose .tbl.wide{font-size:13px}.prose .tbl.wide th,.prose .tbl.wide td{padding:9px 8px}.prose .tbl.wide thead th{font-size:10.5px;letter-spacing:.03em}
 }
+/* Precio con conversión de moneda */
+.tbl td.price span{display:block}
+.tbl td.price .price-main{font-weight:600}
+.tbl td.price .price-conv{color:var(--muted);font-size:14px;margin-top:2px}
+.tbl td.price .price-note{color:var(--muted);font-size:12.5px;margin-top:4px}

@@ -11,6 +11,8 @@ map_query: Succo Cocina Italiana Plaza La Perla Guadalajara
 cover: /img/succo/pulpo-pepe.jpg
 excerpt: "Pulpo y ñoquis deliciosos, bebidas refrescantes y un servicio correcto. Solo la porción del pulpo se quedó corta."
 price_pp: "≈ $700 MXN"
+price: {min: 700, currency: MXN, approx: true}
+fx: {"date": "2026-10-31", "source": "Exchange API (fawazahmed0), datos diarios", "rates": {"USD": 0.053227, "CNY": 0.354308, "EUR": 0.047686}}
 reservation: "No. Un viernes en la noche había lugares disponibles, sin espera"
 ideal_for: "Cenar con amigos o en pareja, platicar y tomar un coctel"
 would_return: "Sí. Ya vamos en la tercera visita y no será la última"

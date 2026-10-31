@@ -107,6 +107,45 @@ def fdate(d, lang):
     if lang == "zh": return f"{d.year}年{d.month}月{d.day}日"
     return f"{d.day} de {MONTHS['es'][d.month-1]} de {d.year}"
 
+# ---------- Precios y conversión de moneda ----------
+FX_TARGETS = ["MXN", "USD", "CNY", "EUR"]
+FX_NOTE = {"es": "Tipo de cambio del {d}", "en": "Exchange rate as of {d}", "zh": "汇率日期：{d}"}
+
+def _round(cur, v):
+    if cur == "MXN": step = 10 if v >= 100 else 5
+    elif cur == "CNY": step = 5 if v >= 50 else 1
+    else: step = 1
+    return int(round(v / step) * step)
+
+def _fmt(cur, v, lang):
+    n = f"{v:,}"
+    if cur == "EUR": return f"€{n}" if lang == "en" else f"{n} €"
+    if cur == "MXN": return f"${n} MXN"
+    if cur == "USD": return f"US${n}"
+    if cur == "CNY": return f"¥{n} CNY"
+    return f"{n} {cur}"
+
+def _span(cur, lo, hi, lang, conv=False):
+    r = (lambda v: _round(cur, v)) if conv else (lambda v: int(v) if float(v).is_integer() else v)
+    lo = r(lo); hi = r(hi) if hi is not None else None
+    if hi is None or hi == lo: return _fmt(cur, lo, lang)
+    return _fmt(cur, hi, lang).replace(f"{hi:,}", f"{lo:,}–{hi:,}", 1)   # "$250–300 MXN", "25–30 €"
+
+def price_html(p, lang):
+    """Precio en la moneda local + conversión a las otras monedas (tipo de cambio guardado al publicar)."""
+    pr = p.get("price")
+    if not pr: return esc(p.get("price_pp"))
+    cur, lo, hi = pr["currency"], pr["min"], pr.get("max")
+    main = ("≈ " if pr.get("approx") else "") + _span(cur, lo, hi, lang)
+    out = f'<span class="price-main">{esc(main)}</span>'
+    fx = p.get("fx") or {}
+    rates = fx.get("rates") or {}
+    conv = [f"≈ {_span(c, lo * rates[c], hi * rates[c] if hi is not None else None, lang, True)}" for c in FX_TARGETS if c != cur and c in rates]
+    if conv: out += f'<span class="price-conv">{esc(" · ".join(conv))}</span>'
+    notes = [x for x in (p.get("price_note"), FX_NOTE[lang].format(d=fdate(fx["date"] if isinstance(fx["date"], datetime.date) else datetime.date.fromisoformat(str(fx["date"])), lang)) if conv else None) if x]
+    if notes: out += f'<span class="price-note">{esc(" · ".join(notes))}</span>'
+    return out
+
 # ---------- Rutas por idioma ----------
 SEG = {"es": dict(rev="resenas", cat="categoria", about="sobre-mi", privacy="privacidad"),
        "en": dict(rev="reviews", cat="category", about="about", privacy="privacy"),
@@ -248,9 +287,9 @@ def review(p, lang):
                      + f'<tfoot><tr><td colspan="3">{t["wnote"].format(raw=f"{raw:.2f}", final=f"{final:g}")} <a href="{url(lang, "about")}#metodo">{t["method"]}</a></td></tr></tfoot></table></section>')
     if p.get("rating") not in (None, ""):
         rating = f'<div class="rating">{stars(p["rating"], lang)}</div>'
-    facts = [(t["f_price"], p.get("price_pp")), (t["f_res"], p.get("reservation")), (t["f_dur"], p.get("duration")), (t["f_ideal"], p.get("ideal_for")),
+    facts = [(t["f_price"], None), (t["f_res"], p.get("reservation")), (t["f_dur"], p.get("duration")), (t["f_ideal"], p.get("ideal_for")),
              (t["f_ret"], p.get("would_return")), (t["f_date"], fdate(p["date"], lang))]
-    ficha = f'<section class="ficha"><h2>{t["facts"]}</h2><table class="tbl">' + "".join(f'<tr><th scope="row">{k}</th><td>{esc(v)}</td></tr>' for k, v in facts if v) + "</table></section>"
+    ficha = f'<section class="ficha"><h2>{t["facts"]}</h2><table class="tbl">' + f'<tr><th scope="row">{t["f_price"]}</th><td class="price">{price_html(p, lang)}</td></tr>' + "".join(f'<tr><th scope="row">{k}</th><td>{esc(v)}</td></tr>' for k, v in facts[1:] if v) + "</table></section>"
     order = "".join(f"<li>{esc(x)}</li>" for x in (p.get("order") or []))
     avoid = "".join(f"<li>{esc(x)}</li>" for x in (p.get("avoid") or []))
     tips = ""

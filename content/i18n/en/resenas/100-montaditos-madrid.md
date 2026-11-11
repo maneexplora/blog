@@ -2,7 +2,7 @@
 title: "100 Montaditos, Madrid: an honest review"
 city: Madrid, Spain
 category: Beer bar
-excerpt: "My first meal in Madrid: a lively vibe and low prices, but the service left a lot to be desired."
+excerpt: "My first meal in Madrid: a lively vibe and affordable prices; the service has room to grow."
 reservation: "No. There was no wait, though I think we got lucky: it fills up"
 ideal_for: "A few beers and a quick bite"
 would_return: "Probably not: Madrid has better options"
@@ -11,7 +11,7 @@ order:
   - "A mix of montaditos from the Euromanía menu, to try several"
 avoid_title: "Good to know"
 avoid:
-  - "If good service matters to you, this branch wasn't the best experience"
+  - "It gets busy: service can vary depending on the moment"
 captions:
   - "Montaditos with chips, olives and beer"
   - "The beer, ice-cold"
@@ -36,9 +36,9 @@ During our visit, the menu had the Euromanía promotion, with montaditos from �
 
 ## Room for improvement
 
-- **The service.** We got a waiter with a bad attitude, even toward his own coworkers. I don't want to generalize: it's a big chain and this was our experience at this branch.
+- **The service.** On the day we went, one of the waiters wasn't the friendliest, and there was noticeable tension with his coworkers. I don't want to generalize: it's a big chain, the place was full, and this was only our experience at this branch.
 - **The flavor.** Fine, neither very good nor bad.
 
 ## Verdict
 
-A cheap option for a few beers and a quick bite, with a good atmosphere. But the service we got weighed heavily, and Madrid has better places, so I probably wouldn't go back.
+An affordable option for a few beers and a quick bite, with a good atmosphere. Service matters most to me and this time we didn't catch them on their best day; with so many options in Madrid, I'd probably try other places before going back.

@@ -6,10 +6,10 @@ place: 100 Montaditos
 city: Madrid, España
 category: Cervecería
 rating: 2.5
-instagram:
+instagram: 100montaditos
 map_query: 100 Montaditos Alberto Alcocer Madrid
 cover: /img/100-montaditos/mesa.jpg
-excerpt: "Mi primera comida en Madrid: buen ambiente y precios bajos, pero el servicio dejó mucho que desear."
+excerpt: "Mi primera comida en Madrid: buen ambiente y precios accesibles; en el servicio hay una oportunidad."
 price_pp: "10 € por persona"
 price: {min: 10, currency: EUR}
 fx: {"date": "2026-11-11", "source": "Exchange API (fawazahmed0), datos diarios", "rates": {"MXN": 20.743663, "USD": 1.116215, "CNY": 7.449952}}
@@ -23,7 +23,7 @@ order:
   - "Montaditos variados de la carta Euromanía para probar varios"
 avoid_title: "A considerar"
 avoid:
-  - "Si buscas buen servicio, esta sucursal no fue la mejor experiencia"
+  - "Es un lugar concurrido: la atención puede variar según el momento"
 gallery:
   - [/img/100-montaditos/mesa.jpg, "Montaditos con papas, aceitunas y cerveza"]
   - [/img/100-montaditos/cerveza.jpg, "La cerveza, bien fría"]
@@ -52,9 +52,9 @@ En nuestra visita, la carta tenía la promoción Euromanía, con montaditos desd
 
 ## A mejorar
 
-- **El servicio.** Nos tocó un camarero con mala actitud, incluso con sus propios compañeros. No me gustaría generalizar: es una cadena grande y esta fue nuestra experiencia en esta sucursal.
+- **El servicio.** El día de nuestra visita, la atención de uno de los camareros no fue la más amable, y se notaba tensión con sus compañeros. No me gustaría generalizar: es una cadena grande, el lugar estaba lleno y esta fue solo nuestra experiencia en esta sucursal.
 - **El sabor.** Correcto, ni muy bueno ni malo.
 
 ## Veredicto
 
-Una opción barata para unas cervezas y algo rápido, con buen ambiente. Pero el servicio que nos tocó pesó mucho, y en Madrid hay lugares mejores, así que probablemente no volvería.
+Una opción accesible para unas cervezas y algo rápido, con buen ambiente. Para mí el servicio es lo más importante y esta vez no nos tocó el mejor día; con tantas opciones en Madrid, probablemente probaría otros lugares antes de volver.

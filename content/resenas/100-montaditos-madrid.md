@@ -52,7 +52,7 @@ En nuestra visita, la carta tenía la promoción Euromanía, con montaditos desd
 
 ## A mejorar
 
-- **El servicio.** El día de nuestra visita, la atención de uno de los camareros no fue la más amable, y se notaba tensión con sus compañeros. No me gustaría generalizar: es una cadena grande, el lugar estaba lleno y esta fue solo nuestra experiencia en esta sucursal.
+- **El servicio.** El día de nuestra visita, la atención de uno de los camareros no fue la más amable, y se notaba tensión con sus compañeros. No me gustaría generalizar: es una cadena grande y esta fue solo nuestra experiencia en esta sucursal.
 - **El sabor.** Correcto, ni muy bueno ni malo.
 
 ## Veredicto

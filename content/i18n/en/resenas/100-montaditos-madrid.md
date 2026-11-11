@@ -36,7 +36,7 @@ During our visit, the menu had the Euroman√≠a promotion, with montaditos from ‚Ç
 
 ## Room for improvement
 
-- **The service.** On the day we went, one of the waiters wasn't the friendliest, and there was noticeable tension with his coworkers. I don't want to generalize: it's a big chain, the place was full, and this was only our experience at this branch.
+- **The service.** On the day we went, one of the waiters wasn't the friendliest, and there was noticeable tension with his coworkers. I don't want to generalize: it's a big chain and this was only our experience at this branch.
 - **The flavor.** Fine, neither very good nor bad.
 
 ## Verdict

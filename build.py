@@ -34,7 +34,7 @@ T = {
     intro="Lo bueno, lo mejorable y si vale la pena ir. Sin filtros ni patrocinios ocultos.",
     nav_reviews="Reseñas", nav_about="Sobre mí", all="Todas", privacy="Privacidad",
     about_title="Sobre mí", privacy_title="Política de privacidad",
-    sections={"restaurantes": "Restaurantes y cafés", "arte-y-cultura": "Arte y cultura"},
+    sections={"restaurantes": "Restaurantes y cafés", "arte-y-cultura": "Arte y cultura", "viajes": "Viajes y aeropuertos"},
     section_desc="Reseñas honestas de {n}.",
     of5="de 5 · calificación general", criterion="Criterio", weight="Peso", score="Calificación",
     wnote="Promedio ponderado: {raw} → {final}, redondeado a medio punto.", method="Ver mi método",
@@ -56,7 +56,7 @@ T = {
     intro="The good, what could be better, and whether it's worth going. No filters, no hidden sponsorships.",
     nav_reviews="Reviews", nav_about="About me", all="All", privacy="Privacy",
     about_title="About me", privacy_title="Privacy policy",
-    sections={"restaurantes": "Restaurants & cafés", "arte-y-cultura": "Art & culture"},
+    sections={"restaurantes": "Restaurants & cafés", "arte-y-cultura": "Art & culture", "viajes": "Travel & airports"},
     section_desc="Honest reviews: {n}.",
     of5="out of 5 · overall rating", criterion="Criterion", weight="Weight", score="Rating",
     wnote="Weighted average: {raw} → {final}, rounded to the nearest half point.", method="See my method",
@@ -73,14 +73,16 @@ T = {
     verdicts=("Worth the trip", "Worth a detour", "Interesting"),
     crit={"Servicio": "Service", "Sabor": "Flavor", "Ambiente": "Ambience", "Calidad-precio": "Value for money",
           "Exposición": "Exhibition", "Experiencia y montaje": "Experience & curation", "Edificio": "Building",
-          "Atención y orientación": "Guidance & assistance"}),
+          "Atención y orientación": "Guidance & assistance",
+          "Arte y cosas que ver": "Art & things to see", "Comodidad e instalaciones": "Comfort & facilities",
+          "Comida y tiendas": "Food & shops", "Orientación y servicio": "Wayfinding & service"}),
  "zh": dict(
     tagline="餐厅、咖啡馆、文化与旅行的真实点评",
     desc="好在哪里、哪里还能更好、值不值得去。Manuel Alemán 关于餐厅、咖啡馆、博物馆与旅行的真实点评。",
     intro="好在哪里、哪里还能更好、值不值得去。不加滤镜，没有隐藏赞助。",
     nav_reviews="点评", nav_about="关于我", all="全部", privacy="隐私政策",
     about_title="关于我", privacy_title="隐私政策",
-    sections={"restaurantes": "餐厅与咖啡馆", "arte-y-cultura": "艺术与文化"},
+    sections={"restaurantes": "餐厅与咖啡馆", "arte-y-cultura": "艺术与文化", "viajes": "旅行与机场"},
     section_desc="真实点评：{n}。",
     of5="满分 5 分 · 综合评分", criterion="标准", weight="权重", score="评分",
     wnote="加权平均：{raw} → {final}（四舍五入至 0.5 分）。", method="查看我的评分方法",
@@ -97,7 +99,9 @@ T = {
     verdicts=("值得专程前往", "值得绕道前往", "有意思"),
     crit={"Servicio": "服务", "Sabor": "口味", "Ambiente": "环境", "Calidad-precio": "性价比",
           "Exposición": "展览", "Experiencia y montaje": "体验与布展", "Edificio": "建筑",
-          "Atención y orientación": "服务与导览"}),
+          "Atención y orientación": "服务与导览",
+          "Arte y cosas que ver": "艺术与看点", "Comodidad e instalaciones": "舒适度与设施",
+          "Comida y tiendas": "餐饮与购物", "Orientación y servicio": "指引与服务"}),
 }
 MONTHS = {"es": ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"],
           "en": ["January","February","March","April","May","June","July","August","September","October","November","December"]}
@@ -150,9 +154,9 @@ def price_html(p, lang):
 SEG = {"es": dict(rev="resenas", cat="categoria", about="sobre-mi", privacy="privacidad"),
        "en": dict(rev="reviews", cat="category", about="about", privacy="privacy"),
        "zh": dict(rev="reviews", cat="category", about="about", privacy="privacy")}
-CAT_SLUG = {"es": {"restaurantes": "restaurantes", "arte-y-cultura": "arte-y-cultura"},
-            "en": {"restaurantes": "restaurants", "arte-y-cultura": "art-and-culture"},
-            "zh": {"restaurantes": "restaurants", "arte-y-cultura": "art-and-culture"}}
+CAT_SLUG = {"es": {"restaurantes": "restaurantes", "arte-y-cultura": "arte-y-cultura", "viajes": "viajes"},
+            "en": {"restaurantes": "restaurants", "arte-y-cultura": "art-and-culture", "viajes": "travel"},
+            "zh": {"restaurantes": "restaurants", "arte-y-cultura": "art-and-culture", "viajes": "travel"}}
 
 def url(lang, kind, key=None):
     pre = "" if lang == "es" else f"/{lang}"
@@ -170,7 +174,9 @@ def stars(r, lang, num=True):
     return f'<span class="stars5" style="--p:{r/5*100:.0f}%" role="img" aria-label="{esc(T[lang]["stars_aria"].format(r=f"{r:g}"))}"></span>' + (f' <b>{r:g}/5</b>' if num else "")
 
 WEIGHTS = {"Servicio": .35, "Sabor": .30, "Ambiente": .15, "Calidad-precio": .20,
-           "Exposición": .35, "Experiencia y montaje": .20, "Edificio": .15, "Atención y orientación": .15}
+           "Exposición": .35, "Experiencia y montaje": .20, "Edificio": .15, "Atención y orientación": .15,
+           # Aeropuertos
+           "Arte y cosas que ver": .30, "Comodidad e instalaciones": .25, "Comida y tiendas": .20, "Orientación y servicio": .25}
 MUSEUM_KEYS = {"Exposición", "Experiencia y montaje", "Edificio", "Atención y orientación"}
 
 def weighted(sc):
@@ -201,7 +207,8 @@ def load():
     posts = {l: [] for l in LANGS}
     for f in glob.glob(os.path.join(ROOT, "content/resenas/*.md")):
         base, body = parse(f)
-        base["section"] = "arte-y-cultura" if "Arte" in base["category"] else "restaurantes"
+        cat = base["category"]
+        base["section"] = base.get("section") or ("viajes" if "Aeropuerto" in cat or "Viaje" in cat else "arte-y-cultura" if "Arte" in cat else "restaurantes")
         if base.get("scores"): base["rating"] = weighted(base["scores"])[1]
         base["langs"] = ["es"]
         variants = {"es": dict(base, html=md(body))}
@@ -289,7 +296,7 @@ def review(p, lang):
         rating = f'<div class="rating">{stars(p["rating"], lang)}</div>'
     facts = [(t["f_price"], None), (t["f_res"], p.get("reservation")), (t["f_dur"], p.get("duration")), (t["f_ideal"], p.get("ideal_for")),
              (t["f_ret"], p.get("would_return")), (t["f_date"], fdate(p["date"], lang))]
-    ficha = f'<section class="ficha"><h2>{t["facts"]}</h2><table class="tbl">' + f'<tr><th scope="row">{t["f_price"]}</th><td class="price">{price_html(p, lang)}</td></tr>' + "".join(f'<tr><th scope="row">{k}</th><td>{esc(v)}</td></tr>' for k, v in facts[1:] if v) + "</table></section>"
+    ficha = f'<section class="ficha"><h2>{t["facts"]}</h2><table class="tbl">' + (f'<tr><th scope="row">{t["f_price"]}</th><td class="price">{price_html(p, lang)}</td></tr>' if (p.get("price") or p.get("price_pp")) else "") + "".join(f'<tr><th scope="row">{k}</th><td>{esc(v)}</td></tr>' for k, v in facts[1:] if v) + "</table></section>"
     order = "".join(f"<li>{esc(x)}</li>" for x in (p.get("order") or []))
     avoid = "".join(f"<li>{esc(x)}</li>" for x in (p.get("avoid") or []))
     tips = ""
@@ -301,7 +308,7 @@ def review(p, lang):
     mapbox = "" if lang == "zh" else f'<div class="map"><iframe title="{esc(t["map_title"].format(p=p["place"]))}" src="https://www.google.com/maps?q={q}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>'
     ld = {"@context":"https://schema.org","@type":"Review","name":p["title"],"datePublished":str(p["date"]),"inLanguage":HTML_LANG[lang],
           "author":{"@type":"Person","name":"Manuel Alemán"},"publisher":{"@type":"Organization","name":SITE["name"]},
-          "itemReviewed":{"@type":"Museum" if p["section"] == "arte-y-cultura" else "Restaurant","name":p["place"],"address":p["city"]},
+          "itemReviewed":{"@type":{"arte-y-cultura": "Museum", "viajes": "Airport"}.get(p["section"], "Restaurant"),"name":p["place"],"address":p["city"]},
           "description":p["excerpt"],"image":SITE["url"]+p["cover"]}
     if p.get("rating") not in (None, ""): ld["reviewRating"]={"@type":"Rating","ratingValue":p["rating"],"bestRating":5,"worstRating":1}
     body = f"""<article class="review">

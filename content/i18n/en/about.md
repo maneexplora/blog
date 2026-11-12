@@ -33,6 +33,15 @@ On value for money, as my mother used to say: *how nice it is to spend when you 
 | 4 | Guidance and assistance | 15% | Information, signage and guides |
 | 5 | Value for money | 15% | What the ticket is worth |
 
+**Airports**
+
+| Order | Criterion | Weight | What I evaluate |
+|:-:|---|:-:|---|
+| 1 | Art and things to see | 30% | Artworks, exhibits and details that make the wait interesting |
+| 2 | Comfort and facilities | 25% | Seating, cleanliness, outlets, places to rest |
+| 3 | Food and shops | 20% | Variety, quality and prices |
+| 4 | Wayfinding and service | 25% | Signage, connections and staff assistance |
+
 Museums end with a verdict:
 
 | Rating | Verdict |

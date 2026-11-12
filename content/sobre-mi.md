@@ -33,6 +33,15 @@ Sobre calidad-precio, como decía mi madre: *qué rico es gastar cuando disfruta
 | 4 | Atención y orientación | 15% | Información, señalización y guías |
 | 5 | Calidad-precio | 15% | Lo que vale la entrada |
 
+**Aeropuertos**
+
+| Orden | Criterio | Peso | Qué evalúo |
+|:-:|---|:-:|---|
+| 1 | Arte y cosas que ver | 30% | Obras, exposiciones y detalles que hacen la espera interesante |
+| 2 | Comodidad e instalaciones | 25% | Asientos, limpieza, enchufes, espacios para descansar |
+| 3 | Comida y tiendas | 20% | Variedad, calidad y precios |
+| 4 | Orientación y servicio | 25% | Señalización, conexiones y atención del personal |
+
 Los museos cierran con un veredicto:
 
 | Calificación | Veredicto |

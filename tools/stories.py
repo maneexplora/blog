@@ -114,32 +114,69 @@ def stars(c, x, y, r, value, gap):
             ImageDraw.Draw(mask).rectangle([cx - r, y, cx - r + 2 * r * frac, y + 2 * r], fill=255)
             c.paste(on, (0, 0), Image.composite(on.split()[3], Image.new("L", c.size, 0), mask))
 
+def _fit(d, text, fpath, size, maxw, min_size, weight="Bold", max_lines=2):
+    """Ajusta el texto al ancho: reduce la fuente y, si hace falta, lo parte en líneas."""
+    while True:
+        f = font(fpath, size, weight)
+        words, lines, cur = text.split(), [], ""
+        for w_ in words:
+            t = (cur + " " + w_).strip()
+            if d.textlength(t, font=f) <= maxw or not cur: cur = t
+            else: lines.append(cur); cur = w_
+        lines.append(cur)
+        if (len(lines) <= max_lines and all(d.textlength(l, font=f) <= maxw for l in lines)) or size <= min_size:
+            return f, lines, size
+        size -= 2
+
 def rating_card(p):
     """Tarjeta de calificación: no necesita sticker, se puede publicar en automático."""
     photo = Image.open(os.path.join(ROOT, "static", p["cover"].lstrip("/"))).convert("RGB")
     c = background(photo).convert("RGBA")
     d = ImageDraw.Draw(c)
     raw, final, w = weighted(p["scores"])
-    panel = (90, 300, 990, 1560)
-    ov = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-    ImageDraw.Draw(ov).rounded_rectangle(panel, 40, fill=(22, 19, 15, 228), outline=(255, 255, 255, 40), width=2)
-    c.alpha_composite(ov)
-    d.text((W / 2, 360), "RESEÑA HONESTA", font=inter(30, "SemiBold"), fill=ACCENT, anchor="ma")
-    d.text((W / 2, 410), p["place"], font=font(os.path.join(FONTS, "Fraunces.ttf"), 76, "Bold"), fill=CREAM, anchor="ma")
-    d.text((W / 2, 510), p["city"], font=inter(30, "Regular"), fill=(200, 192, 182), anchor="ma")
-    d.text((W / 2, 580), f"{final:g}", font=font(os.path.join(FONTS, "Fraunces.ttf"), 190, "Bold"), fill=CREAM, anchor="ma")
-    stars(c, W / 2 - 2.5 * 84 + 6, 800, 36, final, 84)
-    label = verdict(final, "es") if p.get("verdict_label") else "de 5"
-    d.text((W / 2, 890), label, font=inter(34, "SemiBold"), fill=ACCENT if p.get("verdict_label") else (200, 192, 182), anchor="ma")
-    y = 980
+    FR = os.path.join(FONTS, "Fraunces.ttf")
+    L, R = 170, 910                      # márgenes internos del panel
+    name = p.get("card_name") or p["place"]
+    tf, tlines, ts = _fit(d, name, FR, 76, R - L, 44)
+    lh = int(ts * 1.12)
+    # Columnas de criterios: etiqueta | peso | estrellas | número
+    STAR, GAP = 34, 6
+    num_x = R; stars_x = num_x - 40 - (5 * STAR + 4 * GAP); wt_x = stars_x - 24
+    lab_w = wt_x - 70 - L
+    rows = []
     for k, v in p["scores"].items():
-        d.line([(170, y - 22), (910, y - 22)], fill=(255, 255, 255, 50), width=2)
-        d.text((170, y), k, font=inter(34, "Regular"), fill=CREAM, anchor="la")
-        d.text((640, y + 2), f"{w[k]*100:.0f}%", font=inter(26, "Regular"), fill=(170, 162, 152), anchor="ra")
-        stars(c, 690, y + 4, 16, v, 38)
-        d.text((910, y), f"{v:g}", font=inter(34, "SemiBold"), fill=CREAM, anchor="ra")
-        y += 92
-    d.text((W / 2, 1490), "maneexplora.com", font=inter(32, "SemiBold"), fill=CREAM, anchor="ma")
+        lf, ll, _ = _fit(d, k, os.path.join(INTER, "Inter-Regular.otf"), 34, lab_w, 28, None)
+        rows.append((k, v, lf, ll))
+    title_h = lh * len(tlines)
+    rows_h = sum(60 + 40 * (len(r[3]) - 1) + 32 for r in rows)
+    top = 300
+    bottom = top + 60 + 50 + title_h + 20 + 50 + 220 + 70 + 70 + rows_h + 40 + 80
+    top = max(140, (H - (bottom - top)) // 2); bottom = top + (bottom - 300)
+    ov = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    ImageDraw.Draw(ov).rounded_rectangle((90, top, 990, bottom), 40, fill=(22, 19, 15, 232), outline=(255, 255, 255, 40), width=2)
+    c.alpha_composite(ov)
+    y = top + 60
+    d.text((W / 2, y), "RESEÑA HONESTA", font=inter(30, "SemiBold"), fill=ACCENT, anchor="ma"); y += 50
+    for ln in tlines:
+        d.text((W / 2, y), ln, font=tf, fill=CREAM, anchor="ma"); y += lh
+    y += 20
+    d.text((W / 2, y), p["city"], font=inter(30, "Regular"), fill=(200, 192, 182), anchor="ma"); y += 50
+    d.text((W / 2, y), f"{final:g}", font=font(FR, 190, "Bold"), fill=CREAM, anchor="ma"); y += 220
+    stars(c, W / 2 - 2.5 * 84 + 6, y, 36, final, 84); y += 90
+    label = verdict(final, "es") if p.get("verdict_label") else "de 5"
+    d.text((W / 2, y), label, font=inter(34, "SemiBold"), fill=ACCENT if p.get("verdict_label") else (200, 192, 182), anchor="ma"); y += 70
+    for k, v, lf, ll in rows:
+        d.line([(L, y), (R, y)], fill=(255, 255, 255, 50), width=2)
+        y += 30
+        rh = 40 * (len(ll) - 1)
+        for i, ln in enumerate(ll):
+            d.text((L, y + i * 40), ln, font=lf, fill=CREAM, anchor="la")
+        cy = y + rh / 2
+        d.text((wt_x, cy + 4), f"{w[k]*100:.0f}%", font=inter(26, "Regular"), fill=(170, 162, 152), anchor="ra")
+        stars(c, stars_x, cy + 2, 15, v, STAR + GAP)
+        d.text((num_x, cy), f"{v:g}", font=inter(34, "SemiBold"), fill=CREAM, anchor="ra")
+        y += rh + 62
+    d.text((W / 2, bottom - 70), "maneexplora.com", font=inter(32, "SemiBold"), fill=CREAM, anchor="ma")
     return c.convert("RGB")
 
 def main(slugs):

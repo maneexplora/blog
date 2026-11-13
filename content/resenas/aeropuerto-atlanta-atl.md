@@ -5,6 +5,7 @@ date: 2026-10-31
 place: Aeropuerto Internacional Hartsfield-Jackson (ATL)
 city: Atlanta, Estados Unidos
 category: Aeropuerto
+instagram: atlairport
 map_query: Hartsfield-Jackson Atlanta International Airport Concourse E
 cover: /img/aeropuerto-atlanta/bird-dog.jpg
 excerpt: "Una escala que se siente como un museo: arte, historia y hip hop en el Concourse E."

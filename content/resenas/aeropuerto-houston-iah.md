@@ -5,6 +5,7 @@ date: 2026-10-31
 place: Aeropuerto Intercontinental George Bush (IAH)
 city: Houston, Estados Unidos
 category: Aeropuerto
+instagram: houstoniah
 map_query: George Bush Intercontinental Airport Terminal A Houston
 cover: /img/aeropuerto-houston/greetings.jpg
 excerpt: "Una escala correcta en la Terminal A, con un par de obras que vale la pena buscar."

@@ -9,6 +9,7 @@ map_query: George Bush Intercontinental Airport Terminal A Houston
 cover: /img/aeropuerto-houston/greetings.jpg
 excerpt: "Una escala correcta en la Terminal A, con un par de obras que vale la pena buscar."
 ideal_for: "Escalas y conexiones"
+would_return: "Sí, volvería a hacer escala aquí"
 paid: true
 scores: {"Arte y cosas que ver": 2, "Comodidad e instalaciones": 3, "Comida y tiendas": 3, "Orientación y servicio": 4}
 order_title: "Qué no perderte"

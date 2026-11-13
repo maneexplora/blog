@@ -5,6 +5,7 @@ city: Atlanta, United States
 category: Airport
 excerpt: "A layover that feels like a museum: art, history and hip hop in Concourse E."
 ideal_for: "Long layovers and art lovers"
+would_return: "Yes, I'd happily connect here again"
 order_title: "Don't miss"
 order:
   - "The Martin Luther King Jr. exhibit, with objects from the King Center"

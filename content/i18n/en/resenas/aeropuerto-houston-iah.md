@@ -5,6 +5,7 @@ city: Houston, United States
 category: Airport
 excerpt: "A smooth layover in Terminal A, with a couple of artworks worth seeking out."
 ideal_for: "Layovers and connections"
+would_return: "Yes, I'd happily connect here again"
 order_title: "Don't miss"
 order:
   - "The Greetings from Houston mural by Daniel Anguilu"

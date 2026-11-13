@@ -9,6 +9,7 @@ map_query: Hartsfield-Jackson Atlanta International Airport Concourse E
 cover: /img/aeropuerto-atlanta/bird-dog.jpg
 excerpt: "Una escala que se siente como un museo: arte, historia y hip hop en el Concourse E."
 ideal_for: "Escalas largas y amantes del arte"
+would_return: "Sí, volvería a hacer escala aquí"
 scores: {"Arte y cosas que ver": 5, "Comodidad e instalaciones": 3, "Comida y tiendas": 3, "Orientación y servicio": 4}
 order_title: "Qué no perderte"
 order:

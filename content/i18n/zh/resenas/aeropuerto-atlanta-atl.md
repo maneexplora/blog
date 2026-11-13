@@ -5,6 +5,7 @@ city: 美国 · 亚特兰大
 category: 机场
 excerpt: "一次像逛博物馆的转机：E 号候机区的艺术、历史与嘻哈。"
 ideal_for: "长时间转机、艺术爱好者"
+would_return: "会，愿意再次在这里转机"
 order_title: "不要错过"
 order:
   - "马丁·路德·金展览，展品来自 King Center"

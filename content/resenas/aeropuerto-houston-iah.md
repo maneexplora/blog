@@ -21,7 +21,7 @@ avoid:
   - "El arte está repartido entre terminales: antes de llegar, revisa en fly2houston.com qué hay en la tuya"
 gallery:
   - [/img/aeropuerto-houston/greetings.jpg, "Greetings from Houston, de Daniel Anguilu"]
-  - [/img/aeropuerto-houston/manuel-y-paty.jpg, "Con Paty, en nuestra escala en Houston"]
+  - [/img/aeropuerto-houston/en-la-escala.jpg, "En nuestra escala en Houston"]
   - [/img/aeropuerto-houston/rodeo.jpg, "Exhibición de rodeo: caballos pintados, montura y carreta"]
   - [/img/aeropuerto-houston/colibri.jpg, "Un colibrí sobre la zona de sillas de masaje"]
   - [/img/aeropuerto-houston/cohete.jpg, "Un cohete de neón en la terminal"]

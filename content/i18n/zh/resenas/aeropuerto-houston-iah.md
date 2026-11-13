@@ -15,7 +15,7 @@ avoid:
   - "艺术品分布在不同航站楼：出发前可在 fly2houston.com 查看你所在航站楼有哪些作品"
 captions:
   - "Greetings from Houston，Daniel Anguilu 作品"
-  - "我和 Paty，在休斯敦转机途中"
+  - "在休斯敦转机途中"
   - "牛仔竞技主题展：彩绘马匹、马鞍和马车"
   - "按摩椅区上方的一只蜂鸟"
   - "航站楼里的霓虹火箭"

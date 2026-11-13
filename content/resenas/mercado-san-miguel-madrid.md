@@ -5,6 +5,7 @@ date: 2026-11-02
 place: Mercado de San Miguel
 city: Madrid, España
 category: Mercado gastronómico
+instagram: mercadosanmiguel
 map_query: Mercado de San Miguel, Plaza de San Miguel, 28005 Madrid
 cover: /img/mercado-san-miguel/bravas.jpg
 excerpt: "Un mercado precioso, con comida rica y servicio rápido; eso sí, pensado para el turismo y un poco caro."

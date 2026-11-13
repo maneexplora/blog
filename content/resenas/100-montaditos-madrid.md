@@ -47,7 +47,7 @@ En nuestra visita, la carta tenía la promoción Euromanía, con montaditos desd
 ## Lo bueno
 
 - **El ambiente.** El lugar tiene mucha vida y va mucha gente.
-- **La cerveza.** Rica y bien fría, aunque no es un diferenciador: en todo Madrid se encuentra cerveza Mahou.
+- **La cerveza.** Rica y bien fría, servida en tarro de la casa.
 - **El precio.** Comimos por unos 10 € por persona: seis montaditos (salmón, jamón, cerdo y uno con queso, entre otros), papas a la francesa y aceitunas.
 
 ## A mejorar

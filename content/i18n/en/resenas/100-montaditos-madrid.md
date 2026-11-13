@@ -31,7 +31,7 @@ During our visit, the menu had the Euromanía promotion, with montaditos from �
 ## The good
 
 - **The atmosphere.** The place is lively and draws a big crowd.
-- **The beer.** Tasty and ice-cold, though not a differentiator: you can find Mahou beer all over Madrid.
+- **The beer.** Tasty and ice-cold, served in the house mug.
 - **The price.** We ate for about €10 per person: six montaditos (salmon, ham, pork and one with cheese, among others), French fries and olives.
 
 ## Room for improvement

@@ -7,11 +7,12 @@ city: Madrid, España
 category: Cervecería
 rating: 2.5
 instagram: 100montaditos
-map_query: 100 Montaditos Alberto Alcocer Madrid
+map_query: 100 Montaditos, Calle del Príncipe de Vergara 254, 28016 Madrid
 cover: /img/100-montaditos/mesa.jpg
 excerpt: "Mi primera comida en Madrid: buen ambiente y precios accesibles; en el servicio hay una oportunidad."
-price_pp: "10 € por persona"
-price: {min: 10, currency: EUR}
+price_pp: "8 € por persona"
+price: {min: 8, currency: EUR, approx: true}
+price_note: "15.20 € en total para dos personas"
 fx: {"date": "2026-11-11", "source": "Exchange API (fawazahmed0), datos diarios", "rates": {"MXN": 20.743663, "USD": 1.116215, "CNY": 7.449952}}
 reservation: "No. No hubo espera, aunque creo que tuvimos suerte: el lugar se llena"
 ideal_for: "Unas cervezas y algo rápido para picar"
@@ -38,7 +39,7 @@ stories:
   - {photo: /img/100-montaditos/montaditos.jpg, text: "Reseña completa: ficha, precios y calificación", sticker: link}
 ---
 
-Recién llegados a Madrid, lo primero que hicimos fue buscar algo rápido para comer. Elegimos 100 Montaditos, una cadena muy conocida en España, en la sucursal que está cerca de la Avenida de Alberto Alcocer.
+Recién llegados a Madrid, lo primero que hicimos fue buscar algo rápido para comer. Elegimos 100 Montaditos, una cadena muy conocida en España, en la sucursal de la calle del Príncipe de Vergara 254, en Chamartín, cerca de la Avenida de Alberto Alcocer.
 
 100 Montaditos nació en el año 2000 en un quiosco de 19 metros cuadrados en Islantilla (Huelva), fundado por José María Fernández-Capitán, y hoy es la marca principal del Grupo Restalia. *Fuente: [Forbes España](https://forbes.es/empresas/43718/como-lo-hice-grupo-restalia/).*
 
@@ -48,7 +49,7 @@ En nuestra visita, la carta tenía la promoción Euromanía, con montaditos desd
 
 - **El ambiente.** El lugar tiene mucha vida y va mucha gente.
 - **La cerveza.** Rica y bien fría, servida en tarro de la casa.
-- **El precio.** Comimos por unos 10 € por persona: seis montaditos (salmón, jamón, cerdo y uno con queso, entre otros), papas a la francesa y aceitunas.
+- **El precio.** Comimos por unos 8 € por persona (15.20 € para los dos): seis montaditos (salmón, jamón, cerdo y uno con queso, entre otros), papas a la francesa y aceitunas.
 
 ## A mejorar
 

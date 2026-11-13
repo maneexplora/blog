@@ -2,6 +2,7 @@
 title: "100 Montaditos, Madrid: an honest review"
 city: Madrid, Spain
 category: Beer bar
+price_note: "€15.20 in total for two people"
 excerpt: "My first meal in Madrid: a lively vibe and affordable prices; the service has room to grow."
 reservation: "No. There was no wait, though I think we got lucky: it fills up"
 ideal_for: "A few beers and a quick bite"
@@ -22,7 +23,7 @@ captions:
   - "The branch near Avenida de Alberto Alcocer"
 ---
 
-Fresh off the plane in Madrid, the first thing we did was look for a quick bite. We chose 100 Montaditos, a well-known chain in Spain (a *montadito* is a small sandwich on a mini baguette), at the branch near Avenida de Alberto Alcocer.
+Fresh off the plane in Madrid, the first thing we did was look for a quick bite. We chose 100 Montaditos, a well-known chain in Spain (a *montadito* is a small sandwich on a mini baguette), at the branch on Calle del Príncipe de Vergara 254, in Chamartín, near Avenida de Alberto Alcocer.
 
 100 Montaditos was born in 2000 in a 19-square-meter kiosk in Islantilla (Huelva), founded by José María Fernández-Capitán, and today it is the flagship brand of Grupo Restalia. *Source: [Forbes España](https://forbes.es/empresas/43718/como-lo-hice-grupo-restalia/) (in Spanish).*
 
@@ -32,7 +33,7 @@ During our visit, the menu had the Euromanía promotion, with montaditos from �
 
 - **The atmosphere.** The place is lively and draws a big crowd.
 - **The beer.** Tasty and ice-cold, served in the house mug.
-- **The price.** We ate for about €10 per person: six montaditos (salmon, ham, pork and one with cheese, among others), French fries and olives.
+- **The price.** We ate for about €8 per person (€15.20 for the two of us): six montaditos (salmon, ham, pork and one with cheese, among others), French fries and olives.
 
 ## Room for improvement
 

@@ -2,6 +2,7 @@
 title: "100 Montaditos，马德里：真实点评"
 city: 西班牙 · 马德里
 category: 啤酒馆
+price_note: "两人共 15.20 欧元"
 excerpt: "我在马德里的第一餐：氛围热闹、价格实惠，服务还有提升空间。"
 reservation: "不需要。当天无需等位，不过我觉得是运气好：这里经常满座"
 ideal_for: "喝几杯啤酒、简单吃点东西"
@@ -22,7 +23,7 @@ captions:
   - "位于 Alberto Alcocer 大道附近的分店"
 ---
 
-刚到马德里，我们做的第一件事就是找个地方快速吃点东西。我们选了西班牙知名连锁店 100 Montaditos（montadito 是用迷你法棍做的小三明治），去的是 Alberto Alcocer 大道附近的分店。
+刚到马德里，我们做的第一件事就是找个地方快速吃点东西。我们选了西班牙知名连锁店 100 Montaditos（montadito 是用迷你法棍做的小三明治），去的是位于 Chamartín 区 Príncipe de Vergara 街 254 号、靠近 Alberto Alcocer 大道的分店。
 
 100 Montaditos 于 2000 年诞生于韦尔瓦省 Islantilla 一个 19 平方米的小亭子，创始人是 José María Fernández-Capitán，如今是 Restalia 集团的旗舰品牌。*来源：[Forbes España](https://forbes.es/empresas/43718/como-lo-hice-grupo-restalia/)（西班牙语）。*
 
@@ -32,7 +33,7 @@ captions:
 
 - **氛围。** 店里很热闹，客人很多。
 - **啤酒。** 好喝又冰爽，用店里的专属啤酒杯盛装。
-- **价格。** 人均约 10 欧元：六个 montadito（三文鱼、火腿、猪肉、奶酪等）、薯条和橄榄。
+- **价格。** 人均约 8 欧元（两人共 15.20 欧元）：六个 montadito（三文鱼、火腿、猪肉、奶酪等）、薯条和橄榄。
 
 ## 有待改进
 

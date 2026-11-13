@@ -15,6 +15,7 @@ avoid:
   - "The art is spread across terminals: before you arrive, check fly2houston.com for what's in yours"
 captions:
   - "Greetings from Houston, by Daniel Anguilu"
+  - "With Paty, on our Houston layover"
   - "Rodeo exhibit: painted horses, a saddle and a wagon"
   - "A hummingbird above the massage-chair area"
   - "A neon rocket in the terminal"

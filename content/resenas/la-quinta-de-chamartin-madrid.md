@@ -5,6 +5,7 @@ date: 2026-11-03
 place: La Quinta de Chamartín
 city: Madrid, España
 category: Restaurante de tapas y raciones
+instagram: laquintadechamartin
 map_query: La Quinta de Chamartín, Calle de Colombia 11, 28016 Madrid
 cover: /img/la-quinta-chamartin/tortilla.jpg
 card_name: La Quinta de Chamartín

@@ -13,7 +13,7 @@ excerpt: "Comida muy rica y porciones grandes a buen precio, con una de las mejo
 price: {min: 27, currency: EUR, approx: true}
 fx: {"date": "2026-11-19", "source": "Exchange API (fawazahmed0), datos diarios", "rates": {"MXN": 20.729544, "USD": 1.096735, "CNY": 7.311091}}
 price_note: "53.30 € en total para dos personas, con bebidas"
-reservation: "Según la carta, no aceptan reservas para el menú; el resto es por lista de espera, en orden de llegada"
+reservation: "Sí, por teléfono al 91 457 90 34. Según la carta, el menú del día no se reserva: va por lista de espera"
 ideal_for: "Cenar tapas y raciones abundantes en Chamartín"
 would_return: "Sí"
 paid: true

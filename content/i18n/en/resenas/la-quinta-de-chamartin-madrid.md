@@ -4,7 +4,7 @@ city: Madrid, Spain
 category: Tapas and raciones restaurant
 excerpt: "Very tasty food and big portions at a good price, with one of the best tortillas I've had in Madrid. Service and atmosphere were fine."
 price_note: "€53.30 in total for two people, drinks included"
-reservation: "According to the menu, they don't take reservations for the set menu; otherwise it's a waiting list, first come, first served"
+reservation: "Yes, by phone at +34 91 457 90 34. According to the menu, the daily set menu can't be booked: it's a waiting list"
 ideal_for: "A hearty dinner of tapas and raciones in Chamartín"
 would_return: "Yes"
 order:

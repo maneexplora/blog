@@ -4,7 +4,7 @@ city: 西班牙 · 马德里
 category: Tapas 与分享菜餐厅
 excerpt: "菜品非常好吃、分量大、价格实惠，还有我在马德里吃过的最好的土豆饼之一。服务和氛围中规中矩。"
 price_note: "两人共 53.30 欧元，含饮品"
-reservation: "根据菜单，套餐不接受预订；其他情况按到店顺序排队"
+reservation: "可以，电话 +34 91 457 90 34。根据菜单，每日套餐不接受预订，需排队"
 ideal_for: "在 Chamartín 吃一顿分量十足的 tapas 晚餐"
 would_return: "会"
 order:

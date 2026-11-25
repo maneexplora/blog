@@ -75,7 +75,8 @@ T = {
           "Exposición": "Exhibition", "Experiencia y montaje": "Experience & curation", "Edificio": "Building",
           "Atención y orientación": "Guidance & assistance",
           "Arte y cosas que ver": "Art & things to see", "Comodidad e instalaciones": "Comfort & facilities",
-          "Comida y tiendas": "Food & shops", "Orientación y servicio": "Wayfinding & service"}),
+          "Comida y tiendas": "Food & shops", "Orientación y servicio": "Wayfinding & service",
+          "Atracciones": "Rides", "Espectáculo": "Show", "Desfile": "Parade", "Comida": "Food"}),
  "zh": dict(
     tagline="餐厅、咖啡馆、文化与旅行的真实点评",
     desc="好在哪里、哪里还能更好、值不值得去。Manuel Alemán 关于餐厅、咖啡馆、博物馆与旅行的真实点评。",
@@ -101,7 +102,8 @@ T = {
           "Exposición": "展览", "Experiencia y montaje": "体验与布展", "Edificio": "建筑",
           "Atención y orientación": "服务与导览",
           "Arte y cosas que ver": "艺术与看点", "Comodidad e instalaciones": "舒适度与设施",
-          "Comida y tiendas": "餐饮与购物", "Orientación y servicio": "指引与服务"}),
+          "Comida y tiendas": "餐饮与购物", "Orientación y servicio": "指引与服务",
+          "Atracciones": "游乐设施", "Espectáculo": "表演", "Desfile": "巡游", "Comida": "餐饮"}),
 }
 MONTHS = {"es": ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"],
           "en": ["January","February","March","April","May","June","July","August","September","October","November","December"]}
@@ -176,7 +178,9 @@ def stars(r, lang, num=True):
 WEIGHTS = {"Servicio": .35, "Sabor": .30, "Ambiente": .15, "Calidad-precio": .20,
            "Exposición": .35, "Experiencia y montaje": .20, "Edificio": .15, "Atención y orientación": .15,
            # Aeropuertos
-           "Arte y cosas que ver": .30, "Comodidad e instalaciones": .25, "Comida y tiendas": .20, "Orientación y servicio": .25}
+           "Arte y cosas que ver": .30, "Comodidad e instalaciones": .25, "Comida y tiendas": .20, "Orientación y servicio": .25,
+           # Parques temáticos
+           "Atracciones": .40, "Espectáculo": .25, "Desfile": .15, "Comida": .20}
 MUSEUM_KEYS = {"Exposición", "Experiencia y montaje", "Edificio", "Atención y orientación"}
 
 def weighted(sc):

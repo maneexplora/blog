@@ -26,7 +26,7 @@ captions:
   - "The film-studio streets"
   - "First treat: tinto de verano and Cheetos"
   - "The super-villains show: the Joker, Harley Quinn and the Riddler"
-  - "Show finale: motorbikes, cars and the Joker's truck"
+  - "The Daily Planet newsroom, in the Superman area"
   - "Wayne Manor in the queue for Batman Gotham City Escape"
   - "Arkham Asylum, themed from the queue"
   - "The cells of Arkham Asylum"

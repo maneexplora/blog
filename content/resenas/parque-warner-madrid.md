@@ -34,7 +34,7 @@ gallery:
   - [/img/parque-warner-madrid/05-calles-de-estudio.jpg, "Las calles de estudio de cine"]
   - [/img/parque-warner-madrid/06-snack-tinto-de-verano.jpg, "Primer antojo: tinto de verano y Cheetos"]
   - [/img/parque-warner-madrid/07-show-joker.jpg, "El show de los supervillanos: el Joker, Harley Quinn y el Acertijo"]
-  - [/img/parque-warner-madrid/08-show-final.jpg, "Final del show: motos, coches y el camión del Joker"]
+  - [/img/parque-warner-madrid/08-daily-planet.jpg, "La redacción del Daily Planet, en la zona de Superman"]
   - [/img/parque-warner-madrid/09-mansion-wayne.jpg, "La Mansión Wayne en la fila de Batman Gotham City Escape"]
   - [/img/parque-warner-madrid/10-arkham.jpg, "El Asilo Arkham, tematizado desde la fila"]
   - [/img/parque-warner-madrid/11-arkham-celda.jpg, "Las celdas del Asilo Arkham"]

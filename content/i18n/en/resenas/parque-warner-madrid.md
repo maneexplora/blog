@@ -50,7 +50,7 @@ We watched the whole **DC Super-Villains Stunt Show**, a stunt show on wheels: t
 - **Batman Gotham City Escape**, our favourite. The theming starts in the queue: you walk into Wayne Manor, through the study and on to the platform. I thought it would be a gentle ride, but no: it's pure adrenaline, and themed all the way to the end. It's an Intamin multi-launch coaster with three launches, a 45 m top height and 104 km/h, opened in May 2023. *(Sources: Blooloop, Samsung Members.)*
 - **Superman: La Atracción de Acero**, the park's floorless coaster.
 - **Arkham Asylum**: the Gotham asylum theming is great and the ride is good.
-- **A very intense one near the entrance**, the kind that rattles your head. We don't remember its name.
+- **Stunt Fall**, near the entrance: one of the most intense, the kind that rattles your head.
 - **Coaster Express**, the wooden coaster. The park bills it as the tallest and longest in Europe (1,250 m), but we didn't enjoy it: everything shakes, it's pure vibration. If you have lower-back or neck problems, you may have a bad time. *(Source: Parque Warner.)*
 
 I give the rides a 4 because, apart from Batman, most are fairly standard.

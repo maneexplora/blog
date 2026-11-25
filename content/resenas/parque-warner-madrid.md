@@ -62,7 +62,7 @@ Vimos completo el **DC Super-Villains Stunt Show**, un espectáculo de especiali
 - **Batman Gotham City Escape**, nuestra favorita. La tematización empieza desde la fila: entras a la Mansión Wayne, pasas por el despacho y vas avanzando hasta el andén. Pensé que sería un recorrido tranquilo, pero no: te llena de adrenalina, y la tematización sigue hasta el final. Es una montaña rusa *multi-launch* de Intamin con tres lanzamientos, 45 metros de altura máxima y 104 km/h, abierta en mayo de 2023. *(Fuentes: Blooloop, Samsung Members.)*
 - **Superman: La Atracción de Acero**, la montaña rusa sin suelo del parque.
 - **El Asilo Arkham**: toda la temática del manicomio de Gotham está muy padre y el juego está bien.
-- **Una muy fuerte cerca de la entrada**, de las que la cabeza te revolotea toda. No recordamos el nombre.
+- **Stunt Fall**, cerca de la entrada: de las más fuertes, de las que la cabeza te revolotea toda.
 - **Coaster Express**, la montaña rusa de madera. El parque la presenta como la más alta y larga de Europa (1.250 m), pero a nosotros no nos gustó: todo tiembla y es pura vibración. Si sufres de la espalda baja o de las cervicales, puedes pasarla mal. *(Fuente: Parque Warner.)*
 
 Le doy 4 porque, fuera de Batman, la mayoría son normales.

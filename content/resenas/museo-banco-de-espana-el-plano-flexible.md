@@ -5,7 +5,7 @@ date: 2026-11-04
 place: Sala de Exposiciones del Banco de España
 city: Madrid, España
 category: Arte y cultura
-rating: 4.5
+rating: 5
 verdict_label: "Vale el viaje"
 instagram: bancodeespana
 map_query: Banco de España, Plaza de Cibeles, 28014 Madrid
@@ -20,7 +20,7 @@ duration: "Unos 30 minutos"
 ideal_for: "Quien pase por Cibeles y quiera ver arte distinto, sin pagar"
 would_return: "Sí, según la exposición que tengan"
 paid: true
-scores: {"Exposición": 4, "Experiencia y montaje": 5, "Edificio": 5, "Atención y orientación": 4, "Calidad-precio": 5}
+scores: {"Exposición": 5, "Experiencia y montaje": 5, "Edificio": 5, "Atención y orientación": 5, "Calidad-precio": 5}
 order_title: "Qué no perderse"
 order:
   - "La alfombra colgada al centro de la sala, bajo el techo de casetones"

@@ -1,0 +1,14 @@
+# Reels publicados en el blog (página /reels/). Más reciente primero.
+- slug: retiro-madrid
+  file: /reels/retiro-madrid.mp4
+  poster: /reels/retiro-madrid-portada.jpg
+  date: 2026-11-08
+  city: Madrid, España
+  title:
+    es: "Un domingo en el Retiro"
+    en: "A Sunday at El Retiro"
+    zh: "丽池公园的一个周日"
+  desc:
+    es: "Del metro al Estanque Grande, el Palacio de Cristal, el Ángel Caído y La Rosaleda. Si vienen a Madrid, apártense una tarde."
+    en: "From the metro to the Great Pond, the Crystal Palace, the Fallen Angel and La Rosaleda. If you're visiting Madrid, set aside an afternoon. (Narrated in Spanish.)"
+    zh: "从地铁站出发，经过大池塘、水晶宫、堕落天使喷泉和玫瑰园。来马德里的话，留出一个下午吧。（西班牙语解说）"

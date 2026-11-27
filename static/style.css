@@ -112,3 +112,9 @@ figcaption{font-size:14px;color:var(--muted);margin-top:8px}
 .tbl td.price .price-main{font-weight:600}
 .tbl td.price .price-conv{color:var(--muted);font-size:14px;margin-top:2px}
 .tbl td.price .price-note{color:var(--muted);font-size:12.5px;margin-top:4px}
+
+/* Reels */
+.reels{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,340px));gap:28px;padding-bottom:40px}
+.reel{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.reel video{display:block;width:100%;aspect-ratio:9/16;background:#000;object-fit:cover}
+.reel figcaption{padding:14px 18px 18px}.reel h2{margin:6px 0 6px;font-size:22px}.reel p{margin:0;color:var(--muted);font-size:15px}

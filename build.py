@@ -32,7 +32,7 @@ T = {
     tagline="Reseñas honestas de restaurantes, cafés, cultura y viajes",
     desc="Lo bueno, lo mejorable y si vale la pena ir. Reseñas honestas de restaurantes, cafés, museos y viajes por Manuel Alemán.",
     intro="Lo bueno, lo mejorable y si vale la pena ir. Sin filtros ni patrocinios ocultos.",
-    nav_reviews="Reseñas", nav_about="Sobre mí", all="Todas", privacy="Privacidad",
+    nav_reviews="Reseñas", nav_reels="Reels", reels_desc="Videos cortos de mis recorridos y visitas.", nav_about="Sobre mí", all="Todas", privacy="Privacidad",
     about_title="Sobre mí", privacy_title="Política de privacidad",
     sections={"restaurantes": "Restaurantes y cafés", "arte-y-cultura": "Arte y cultura", "viajes": "Viajes y aeropuertos"},
     section_desc="Reseñas honestas de {n}.",
@@ -54,7 +54,7 @@ T = {
     tagline="Honest reviews of restaurants, cafés, culture and travel",
     desc="The good, what could be better, and whether it's worth going. Honest reviews of restaurants, cafés, museums and travel by Manuel Alemán.",
     intro="The good, what could be better, and whether it's worth going. No filters, no hidden sponsorships.",
-    nav_reviews="Reviews", nav_about="About me", all="All", privacy="Privacy",
+    nav_reviews="Reviews", nav_reels="Reels", reels_desc="Short videos from my walks and visits.", nav_about="About me", all="All", privacy="Privacy",
     about_title="About me", privacy_title="Privacy policy",
     sections={"restaurantes": "Restaurants & cafés", "arte-y-cultura": "Art & culture", "viajes": "Travel & airports"},
     section_desc="Honest reviews: {n}.",
@@ -81,7 +81,7 @@ T = {
     tagline="餐厅、咖啡馆、文化与旅行的真实点评",
     desc="好在哪里、哪里还能更好、值不值得去。Manuel Alemán 关于餐厅、咖啡馆、博物馆与旅行的真实点评。",
     intro="好在哪里、哪里还能更好、值不值得去。不加滤镜，没有隐藏赞助。",
-    nav_reviews="点评", nav_about="关于我", all="全部", privacy="隐私政策",
+    nav_reviews="点评", nav_reels="短视频", reels_desc="我的漫步与探店短视频。", nav_about="关于我", all="全部", privacy="隐私政策",
     about_title="关于我", privacy_title="隐私政策",
     sections={"restaurantes": "餐厅与咖啡馆", "arte-y-cultura": "艺术与文化", "viajes": "旅行与机场"},
     section_desc="真实点评：{n}。",
@@ -153,9 +153,9 @@ def price_html(p, lang):
     return out
 
 # ---------- Rutas por idioma ----------
-SEG = {"es": dict(rev="resenas", cat="categoria", about="sobre-mi", privacy="privacidad"),
-       "en": dict(rev="reviews", cat="category", about="about", privacy="privacy"),
-       "zh": dict(rev="reviews", cat="category", about="about", privacy="privacy")}
+SEG = {"es": dict(rev="resenas", cat="categoria", about="sobre-mi", privacy="privacidad", reels="reels"),
+       "en": dict(rev="reviews", cat="category", about="about", privacy="privacy", reels="reels"),
+       "zh": dict(rev="reviews", cat="category", about="about", privacy="privacy", reels="reels")}
 CAT_SLUG = {"es": {"restaurantes": "restaurantes", "arte-y-cultura": "arte-y-cultura", "viajes": "viajes"},
             "en": {"restaurantes": "restaurants", "arte-y-cultura": "art-and-culture", "viajes": "travel"},
             "zh": {"restaurantes": "restaurants", "arte-y-cultura": "art-and-culture", "viajes": "travel"}}
@@ -265,7 +265,7 @@ def page(lang, title, desc, body, alts, image=None, jsonld=None, nav=None):
 <link rel="stylesheet" href="/style.css?v={CSS_V}">{ADS_HEAD()}{ld}{METRICOOL}
 </head><body>
 <header class="top"><a class="logo" href="{home}">Mane <span>Explora</span></a>
-<div class="top-r"><nav><a href="{home}">{t['nav_reviews']}</a><a href="{about}">{t['nav_about']}</a><a href="https://www.instagram.com/{SITE['instagram']}" rel="noopener">Instagram</a></nav>{switch}</div></header>
+<div class="top-r"><nav><a href="{home}">{t['nav_reviews']}</a><a href="{url(lang, 'reels')}">{t['nav_reels']}</a><a href="{about}">{t['nav_about']}</a><a href="https://www.instagram.com/{SITE['instagram']}" rel="noopener">Instagram</a></nav>{switch}</div></header>
 <main>{body}</main>
 <footer><p>© {datetime.date.today().year} {SITE['name']} · {t['footer']}</p>
 <p><a href="{about}">{t['nav_about']}</a> · <a href="{priv}">{t['privacy']}</a> · <a href="/rss.xml">RSS</a> · <a href="https://www.instagram.com/{SITE['instagram']}">Instagram</a> · <a href="https://www.pinterest.com/{SITE['pinterest']}">Pinterest</a></p></footer>
@@ -336,6 +336,15 @@ def review(p, lang):
     alts = {l: url(l, "rev", p["slug"]) for l in p["langs"]}
     return page(lang, f"{p['title']} | {SITE['name']}", p["excerpt"], body, alts, p["cover"], ld)
 
+def reels_page(lang):
+    t = T[lang]
+    f = os.path.join(ROOT, "content/reels.yaml")
+    items = yaml.safe_load(open(f, encoding="utf-8")) if os.path.exists(f) else []
+    cards = "".join(f'''<figure class="reel" id="{esc(r['slug'])}"><video controls playsinline preload="metadata" poster="{r['poster']}"><source src="{r['file']}" type="video/mp4"></video>
+<figcaption><span class="cat">{esc(r['city'])} · {fdate(r['date'], lang)}</span><h2>{esc(r['title'][lang])}</h2><p>{esc(r['desc'][lang])}</p></figcaption></figure>''' for r in items)
+    body = f'<section class="intro"><h1>{esc(t["nav_reels"])}</h1><p>{esc(t["reels_desc"])}</p></section><section class="reels">{cards}</section>'
+    return page(lang, f"{t['nav_reels']} | {SITE['name']}", t["reels_desc"], body, {l: url(l, "reels") for l in LANGS}, items[0]["poster"] if items else None)
+
 def write(path, txt):
     full = os.path.join(DIST, path.lstrip("/"))
     if full.endswith("/"): full += "index.html"
@@ -361,6 +370,7 @@ def main():
             write(url(lang, "cat", k), page(lang, f"{n} | {SITE['name']}", t["section_desc"].format(n=n.lower() if lang == "es" else n),
                   f'<section class="intro"><h1>{n}</h1></section>' + chips(lang, k) + '<section class="grid">' + "".join(card(p, lang) for p in sel) + "</section>", alts_of("cat", k)))
             sitemap.append(url(lang, "cat", k))
+        write(url(lang, "reels"), reels_page(lang)); sitemap.append(url(lang, "reels"))
         for kind, src in [("about", "sobre-mi"), ("privacy", "privacidad")]:
             f = os.path.join(ROOT, f"content/{src}.md") if lang == "es" else os.path.join(ROOT, f"content/i18n/{lang}/{kind}.md")
             title = t[f"{kind}_title"]
